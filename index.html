@@ -1,123 +1,43 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Miguel's Rincon </title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/htmx.org"></script>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>El Asteroide De Miguel</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/htmx.org"></script>
  
- <style>
-.quote-banner {
-    /* Your styling for the banner */
-    padding: 10px;
-    text-decoration: blue;
-    font-weight: bold;
-    background-color: #a88a8a;
-    text-align: center;
-    /* other styles as needed */
-}
+<style>
+   .quote-banner {
+      /* Your styling for the banner */
+      padding: 10px;
+      text-decoration: blue;
+      font-weight: bold;
+      background-color: #a88a8a;
+      text-align: center;
+      /* other styles as needed */
+  }
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .navbar {
-            background-color: #333;
-            overflow: hidden;
-        }
-
-        .navbar a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            font-size: 36px;
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 1.5;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-    
-
- </style>
+</style>
  
-  </head>
+
+</head>
 
 
 
-  <body>
+<body>
+
+  <nav class="navbar sticky-top bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Sticky top</a>
+    </div>
+  </nav>
 
 
-   <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid" style="background-color: bisque;">
-    <a class="navbar-brand" href="#">El asteroide de Miguel</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarScroll">
-      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Reader</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Download a Resume
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Public Interest</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Hospitality</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Portfolio</a>
-        </li>
-      </ul>
-      <!-- implement a search here for book reader -->
+
+
+      <!-- implement a search here for book reader 
       <form class="d-flex" role="search">
         <input type="text" 
         hx-get="/search"
@@ -129,7 +49,7 @@
       </form>
     </div>
   </div>
-</nav>
+</nav>-->
 
 
 <div class="navbar">
