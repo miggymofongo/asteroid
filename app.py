@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 
 # Directory containing EPUB files
-EPUBS_DIR = './bookshelf/'
+EPUBS_DIR = './bibi-bookshelf/'
 
 @app.route('/')
 def index():
