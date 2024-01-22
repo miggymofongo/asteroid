@@ -4,198 +4,161 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>El Asteroide De Miguel</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script> 
-<style>
-   .quote-banner {
-      /* Your styling for the banner */
-      padding: 10px;
-      text-decoration: blue;
-      color: white;
-      font-weight: bold;
-      background-color: #a88a8a;
-      text-align: center;
-      /* other styles as needed */
-  }
 
-</style>
- 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"></link>
+
+<link rel="stylesheet" href="./styles.css"></link>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script> 
+
+<script src="./scripts.js"></script>
+
+<script src="../epub.js/src/reader.js"></script>
+
+
+
 
 </head>
 
 
 
 <body>
-
-  <div class="container">
-  <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
+  <nav class="navbar navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Bienvenidos a mi Asteroide!</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="#">Miguel's Asteroid</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <!-- Home Page Link -->
-          <li class="nav-item">
-            <a class="nav-link" href="/home">Home</a>
-          </li>
-  
-          <!-- Resume Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarResume" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Resume
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarResume">
-              <li><a class="dropdown-item" href="/resume1">Hospitality</a></li>
-              <li><a class="dropdown-item" href="/resume2">Organizing</a></li>
-              <li><a class="dropdown-item" href="/resume3">Tech</a></li>
-            </ul>
-          </li>
-  
-          <!-- Library Link -->
-          <li class="nav-item">
-            <a class="nav-link" href="https://library.miguelalmodo.com/">Library</a>
-          </li>
-  
-          <!-- Blog Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="https://migs.uber.space/blog" id="navbarBlog" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Blog
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarBlog">
-              <li><a class="dropdown-item" href="/blog1">Blog 1</a></li>
-              <li><a class="dropdown-item" href="/blog2">Blog 2</a></li>
-              <li><a class="dropdown-item" href="/blog3">Blog 3</a></li>
-            </ul>
-          </li>
-        </ul>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://migs.uber.space/blog">Blog</a>
+            </li>
+           <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Resumes
+              </a>
+             <ul class="dropdown-menu dropdown-menu-dark">
+                <!--<li><a class="dropdown-item" href="#">Hospitality</a></li>-->
+                <li><a class="dropdown-item" href="./resumes/PIC.pdf">Public Interest Communications</a></li> 
+                               
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex mt-3" role="search" hx-get="/search" hx-target="#resultsContainer" hx-trigger="keyup changed delay:300ms" hx-params="searchQuery:value">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="searchQuery">   </form>
+
+          <!-- Results -->
+          <div id="resultsContainer"></div>
+        </div>
       </div>
     </div>
+    <script src="https://unpkg.com/htmx.org@1.9.10" crossorigin="anonymous"></script>
+
   </nav>
-  
-
-
-
-<section class="hero">
- 
-
-
-
-
-</div>
-<div class="container">
-
-
-  <h4 text-align="center">Projects</h4>
-  <div class="d-flex align-items-start">
-    <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Web Scraper</button>
-      <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Quote Shuffler</button>
-      <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false" disabled>Portfolio</button>
-      <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Reader</button>
-      <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Blog</button>
-    </div>
-    <div class="tab-content" id="v-pills-tabContent">
-      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">I built a web scraper in python to scrape quotes off a website about my favorite video game.<br><a href="https://github.com/miggymofongo" > Check it out on Github! </a></div>
-      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0"><div class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img class="imga-fluid rounded-start" src="/img/headshot.jpg" alt="miguel headshot" style="width:100%">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Miguel is currently studying for a <a href="https://partners.comptia.org/certifications/a">COMPTIA certification</a>  <br>
-              Follow me on github and linkedin!</p>
-              <p class="card-text"><small class="text-body-secondary"><a href="https://miguelalmodo.com/about" class="btn btn-primary">See Main Bio</a>Last updated 3 months ago</small></p>
-            </div>
-          </div>
+<section>
+  <div class="container my-5">
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+        <h1 class="display-4 fw-bold lh-1">Miguel Almodovar</h1>
+        <p class="lead">I am currently studying for a comptia certification in order to branch out into new career opportunities in tech.
+          Click on a button below to learn a fun fact about me!
+        </p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold" onclick="factAlert('dob')">Show DOB</button>
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold" onclick="factAlert('favorite game')">Show Favorite Game</button>
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold" onclick="factAlert('birthplace')">Show Birthplace</button>
+        
         </div>
-      </div></div>
-      <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0">...</div>
-      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">...</div>
-      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">...</div>
+      </div>
+      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+          <img class="rounded-lg-3" src="./img/headshot.jpg" alt="" width="360">
+      </div>
     </div>
   </div>
-
-  
 </section>
-
-
+  
+<section>
 <div class="container-fluid">
-<!-- In your HTML file -->
-<div id="quoteBanner" class="quote-banner">Quote goes here</div>
+  <!-- <div><div class="card mb-4 text-center mx-auto" style="max-width: 75%;">
+  <div id="area">
+    
+    <script>
+      var rendition = book.renderTo("area", {
+        width: 600,
+        height: 400,
+        allowScriptedContent: true
+      });
+    </script>
+  </div>
+  
+  </div></div> -->
+
+<div><div class="card mb-4 text-center mx-auto" style="max-width: 75%;">
+    <div class="card-body">
+      <h5 class="card-title"><b>Kingdom Heart Quote Shuffler</b></h5>
+      <p class="card-text">I recently built a homemade web scraper in Python to scrape quotes off a database of my favorite video game, Kingdom Hearts.</p> 
+      <p>After scraping the quotes into a json file, I feed them into a small program that fetches and periodically rotates the quotes every 5 seconds.
+        <br>I then installed a Gummi-themed Kingdom Hearts font from <a href="https://github.com/Televo/kingdom-hearts-recollection">a dope Github repository </a> 
+      to make it LEGIT! Check it out below this paragraph.</p>
+      <p class="card-text">
+        <div class="'container-fluid" style="max-width: 800px; margin: auto;">
+          <div class="clearfix">
+            <div id="quoteBanner" class="quote-banner card-footer">
+              <blockquote class="blockquote mb-0">
+                <p>Quote goes here</p>
+                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+              </blockquote>
+            </div>
+        <a href="https://github.com/miggymofongo" class="card-link">Check it out on Github!</a>
+      </p>
+    </div>
+  </div>
+  </div>
 </div>
 
-
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-      fetch('quotes.json')
-          .then(response => response.json())
-          .then(quotes => {
-              let currentQuoteIndex = 0;
-              const quoteBanner = document.getElementById('quoteBanner');
-  
-              // Function to update quote
-              function updateQuote() {
-                  quoteBanner.textContent = quotes[currentQuoteIndex++];
-                  if (currentQuoteIndex >= quotes.length) currentQuoteIndex = 0;
-              }
-  
-              // Set initial quote and update every 10 seconds
-              updateQuote();
-              setInterval(updateQuote, 10000);
-          });
-  });
-  </script>
-
+<script src="scripts.js"></script>
+    
+    
 </section>
+
 
 
 <section>
-  <div class="container">
-    <p>Aqui puedes completar tareas sobre la ciencia politica y varias otras temas 
-      <form class="d-flex" role="search">
-        <input type="search" 
-               hx-get="/search"
-               hx-vals='{"searchQuery": "value"}'
-               hx-trigger="keyup delay:300ms"
-               hx-target="#resultsContainer"
-               placeholder="Search for EPUBs...">
-      </form>
+<div class="container my-5">
+    <img src="./img/forsite.webp" width="200" class="col-md-6 float-md-end mb-3 ms-md-3" alt="Miguel in Japan" style="max-width: 100%; height: auto;">
+  
+    <p>I just turned 30 and and live in Aguadilla, Puerto Rico, with my dog, Kaido. I have been studying CCNA and 
+basic web development curriculum consistantly over the past year to jump into a new tech-focused role. I currently 
+hold a remote role at a California-based organization.</p>
+  
+    <p>I am motivated by a lifelong passion for tech as 
+      a consumer. My earliest memory of opening up a computer was when I flashed custom 
+      firmware on my red God of War PlayStation Portable during middle school. I am recently <a href="https://github.com/miggymofongo">established 
+      on Github </a> and have <a href="https://nilfm.cc/"> a few friends in senior software engineer roles that 
+        are helping guide</a>  my learning journey. </p>
+  
+    <p> Please check back frequently as I update my website and continue to add projects to display on my asteroid.
+      Currently I am learning more about decentralized social media protocols like ActivityPub and Nostr while familiarizing
+      myself with smart contracts and self custody wallet solutions.
     </p>
   </div>
 
-</section>
-
-
-
-<section>
-<!-- search results -->
-<div id="resultsContainer"></div>
-<!-- search results -->
+<script src="./scripts.js"></script>
 
 </section>
 
+<script src="https://unpkg.com/htmx.org@1.9.10" crossorigin="anonymous"></script>
 
-
-<!-- reader loads here after clicking on an epub to open-->
-<section>
-  <a href="https://migs.uber.space/bibi/?book=BOOKNAME.epub" data-bibi="embed" data-bibi-style="[[ CSS for embeded Bibi frame, as you like ]]">[[ Title of the Book ]]</a><script src="https://migs.uber.space/bibi/and/jo.js"></script>
-
-</section>
-
-
-
-
-<script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script> 
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  
-      
   </body>
 </html>

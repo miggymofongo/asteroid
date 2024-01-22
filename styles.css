@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'KHGummi';
+    src: url('./fonts/KHGummi.otf') format('opentype');
+}
+
+
+
+
+
+
+.quote-banner {
+    background-color: #f8f9fa;
+    color: #495057;
+    padding: 20px;
+    font-family: 'KHGummi';
+    
+}
+
+.card-footer {
+    background: transparent;
+    border-top: 0;
+}
+
+.card-link {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    color: #007bff;
+}
+
+/* Additional styling for the blockquote */
+.blockquote {
+    font-style: italic;
+    color: #6c757d;
+}
+
+.blockquote-footer {
+    color: #6c757d;
+}

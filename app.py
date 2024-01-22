@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 
 # Directory containing EPUB files
-EPUBS_DIR = './bibi-bookshelf/'
+RESUME_DIR = './resumes/'
 
 @app.route('/')
 def index():
@@ -21,7 +21,7 @@ def search():
     matching_files = []
 
     # Fetch all EPUB files from the directory and filter them based on the search query
-    all_files = [f for f in os.listdir(EPUBS_DIR) if f.lower().endswith('.epub')]
+    all_files = [f for f in os.listdir(RESUME_DIR) if f.lower().endswith('.epub')]
     matching_files += [f for f in all_files if query in f.lower()]
     
     # Generate HTML for the list of matching files
