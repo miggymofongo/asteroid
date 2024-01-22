@@ -1,3 +1,10 @@
+1.22.24 update
+
+I pushed again today. Trying to set up a self hosted nip-05 verifier but am having  no success yet.
+
+
+
+
 I realized today that I hadn't added my ssh key to the agent on my machine after uploading it to my github, thus preventing me from accessing this git repo. I finally got it figured out, and committed the rest of the files and code that I am hosting on my asteroid at uberspace.de. 
 
 
