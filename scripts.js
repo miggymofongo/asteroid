@@ -1,4 +1,4 @@
-let facts = {
+const facts = {
     dob: 'Nov 30',
     'favorite game': 'Kingdom Hearts',
     birthplace: 'Leominster, Massachusettes, USAmerikkka',
