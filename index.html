@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>El Asteroide De Miguel</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"></link>
+
+<link rel="stylesheet" href="./styles.css"></link>
+
+<style>
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script> 
+
+<script src="./scripts.js"></script>
+<script>
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+
+</script>
+
+<style>
+
+.btn-dark-custom {
+  background-color: #343a40; /* Slightly lighter than the default bg-dark */
+  color: white;
+}
+
+.btn-dark-custom:hover {
+  background-color: #23272b; /* Darken on hover for interaction feedback */
+  color: white;
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Miguel's Asteroid</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="https://library.miguelalmodo.com">Library</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://migs.uber.space/blog">Chronicles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://yakihonne.com/users/nprofile1qqswe9j5qhs356nps6e8lfz35tluzwtwmeug85h2z8pjl0fvvwvkjespr3mhxue69uhkummnw3ez6vp39eukz6mfdphkumn99e3k7mgpr3mhxue69uhkummnw3ez6vpj9eukz6mfdphkumn99e3k7mgpremhxue69uhkummnw3ez6vpn9ejx7unpveskxar0wfujummjvuq3gamnwvaz7tmjv4kxz7fwv3sk6atn9e5k7qg7waehxw309ahx7um5wgknqv3wv3hhyctxv93hgmmj0yhx7un8rfe7nx">Nostr</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Resumes
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Hospitality</a></li>
+                <li><a class="dropdown-item" href="#">Public Interest Communications</a></li>          
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<br>
+
+<section>
+  <div class="container my-5">
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+        <h1 class="display-4 fw-bold lh-1">Miguel Almodóvar</h1>
+        <p class="lead">
+          Putting the COMM in C-O-M-M-U-N-I-T-Y!
+        </p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+          <!-- Button trigger modal 1 -->
+          <button type="button" class="btn btn-dark-custom" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+            Who is Miguel?
+          </button>
+          <!-- Modal 1 -->
+          <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel1">Biography</h5>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h4>Current Chapter</h4><p>
+                    I just turned 30 and and live in Puerto Rico with my dog, Kaido. 
+                  </p>
+                
+                <h4>Last Chapter</h4><p>My 
+                    existence is a stew of lived experiences with a unique window into 
+                    the proliferation of the Internet and it's influence on the way we 
+                    share information.
+                  </p>
+
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Button trigger modal 2 -->
+          <button type="button" class="btn btn-dark-custom" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+          Let's Work Together
+          </button>
+          <!-- Modal 2 -->
+          <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel2">Let's Work Together</h5>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h4>Society at a Crossroads</h4>
+                  <p>The political division we see today is not by accident. In this dystopic society
+                    mired in controversy, tragedy, and a blatant disregard for humanity, movements need 
+                    a robust communication strategy and the power of decentralized internet protocols. </p>
+                 
+                  <h4>Cocreating Understanding</h4>  
+                    <p>The current moment demands that we learn how to talk to each other across political 
+                    and cultural divisions must broaden our collective understanding of how communication influences outcomes 
+                    beyond "strategic sharing". We
+                    </p>
+                    <p>
+                    <a href="https://github.com/miggymofongo"> 
+                    Github </a> and have <a href="https://nilfm.cc/"> a few friends in senior software engineer roles that 
+                      are helping guide</a>  my learning journey. </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Button trigger modal 3 -->
+          <button type="button" class="btn btn-dark-custom" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+            Blogs
+          </button>
+          <!-- Modal 3 -->
+          <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel3">I like to write</h5>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>I host my own Bludit instance with blogs from my travels. </p>
+                  <p>Visit <a href="https://chronicles.miguelalmodo.com">my Chronicles page to check them</a>
+                  out!</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-dark-custom" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+            Content Production
+          </button>
+          <!-- Modal 3 -->
+          <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel3">Captivate your Audience </h5>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>I've supported advocates and organizations over the years in creating 
+                    engaging content for their communities. 
+                  </p>
+                  <h1>Videography</h1>
+                  <h1>Photography</h1>
+                  <h1>Audiography</h1>
+                  <p>Check out my portfolio!</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+        <img class="center" src="./img/headshot.jpg" alt="headshot of Miguel" width="360">
+<br><br>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+<section>
+  <div class="container-fluid">
+  
+  <div><div class="card mb-4 text-center mx-auto" style="max-width: 75%;">
+      <div class="card-body">
+        <h5 class="card-title"><b>Kingdom Heart Quote Shuffler</b></h5>
+        <p class="card-text">I recently built a homemade web scraper in Python to scrape quotes off a database of my favorite video game, Kingdom Hearts.</p> 
+        <p>After scraping the quotes into a json file, I feed them into a small program that fetches and periodically rotates the quotes every 5 seconds.
+          <br>I then installed a Gummi-themed Kingdom Hearts font from <a href="https://github.com/Televo/kingdom-hearts-recollection">a dope Github repository </a> 
+        to make it LEGIT! Check it out below this paragraph.</p>
+        <p class="card-text">
+          <div class="'container-fluid" style="max-width: 800px; margin: auto;">
+            <div class="clearfix">
+              <div id="quoteBanner" class="quote-banner card-footer">
+                <blockquote class="blockquote mb-0">
+                  <p>Quote goes here</p>
+                  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                </blockquote>
+              </div>
+          <a href="https://github.com/miggymofongo" class="card-link">Check it out on Github!</a>
+        </p>
+      </div>
+    </div>
+    </div>
+  </div>
+      
+      
+  </section>
+<section>
+
+<div class="container my-5">
+  
+    
+  </div>
+
+  <script src="./scripts.js"></script>
+
+
+
+<script src="https://unpkg.com/htmx.org@1.9.10" crossorigin="anonymous"></script>
+
+  </body>
+</html>
