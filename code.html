@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>El Asteroide De Miguel</title>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"></link>
+        
+        <link rel="stylesheet" href="./styles.css"></link>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        
+        <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script> 
+        
+        <script src="./scripts.js"></script>
+        
+        
+        <style>
+        
+        .center {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+        }
+        
+        .photo {
+          float: left;
+        }
+        
+        
+        .btn-dark-custom {
+          background-color: #343a40; /* Slightly lighter than the default bg-dark */
+          color: white;
+        }
+        
+        .btn-dark-custom:hover {
+          background-color: #23272b; /* Darken on hover for interaction feedback */
+          color: white;
+        }
+        
+        /* CSS used here will be applied after bootstrap.css */
+        .jumbotron{
+          position: relative;
+          z-index:-2;
+        }
+        
+        #video-background { 
+          position: fixed;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          overflow: hidden;
+          z-index: -1;
+          width:100%;
+        }
+        </style>
+        
+        </head>
+
+</head>
+
+
+<body>
+<header>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Miguel's Asteroid</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://migs.uber.space/">About</a>
+      
+                  </li>
+    
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://yakihonne.com/users/nprofile1qqswe9j5qhs356nps6e8lfz35tluzwtwmeug85h2z8pjl0fvvwvkjespr3mhxue69uhkummnw3ez6vp39eukz6mfdphkumn99e3k7mgpr3mhxue69uhkummnw3ez6vpj9eukz6mfdphkumn99e3k7mgpremhxue69uhkummnw3ez6vpn9ejx7unpveskxar0wfujummjvuq3gamnwvaz7tmjv4kxz7fwv3sk6atn9e5k7qg7waehxw309ahx7um5wgknqv3wv3hhyctxv93hgmmj0yhx7un8rfe7nx">Nostr</a>
+                  </li>
+    
+    
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Collaborate
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">Content Production</a></li>
+                    <li><a class="dropdown-item" href="#">Code</a></li>  
+                    <li><a class="dropdown-item" href="#">Campaign Strategy</a></li>        
+                  </ul>
+                </li>
+    
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Resumes
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">Hospitality</a></li>
+                    <li><a class="dropdown-item" href="#">Public Interest Communications</a></li>          
+                  </ul>
+                </li>
+    
+    
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Garden
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">Library</a></li>
+                    <li><a class="dropdown-item" href="https://migs.uber.space/blog">Chronicles</a></li> 
+                    <li><a class="dropdown-item" href="">Quote Shuffler</a></li>         
+                  </ul>
+                </li>
+    
+    
+    
+                
+    
+    
+    
+               
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+
+
+
+      <section>
+
+        <div class="my-5">
+          <div class="p-5 text-center bg-body-tertiary" style="">
+      
+          <!--quote shuffler begins-->
+      <div class="clearfix">
+        <div id="quoteBanner" class="quote-banner card-footer">
+          <blockquote class="blockquote mb-0">
+            <p>Quote goes here</p>
+            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+          </blockquote>
+        </div>
+        </div>
+      
+        
+      </section>
+
+
+
+</header>
