@@ -9,29 +9,115 @@
 
 <link rel="stylesheet" href="./styles.css"></link>
 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="./infinite-scroll-docs.min.js"> </script>
+
+<script src="./scripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+<script>
+
+$('.container').infiniteScroll({
+  // options
+  path: '.pagination__next',
+  append: '.post',
+  history: false,
+});
+
+
+</script>
+
 <style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .b-example-divider {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+  .b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
+
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .btn-bd-primary {
+    --bd-violet-bg: #712cf9;
+    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bd-violet-bg);
+    --bs-btn-border-color: var(--bd-violet-bg);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #6528e0;
+    --bs-btn-hover-border-color: #6528e0;
+    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #5a23c8;
+    --bs-btn-active-border-color: #5a23c8;
+  }
+
+  .bd-mode-toggle {
+    z-index: 1500;
+  }
+
+  .bd-mode-toggle .dropdown-menu .active .bi {
+    display: block !important;
+  }
+
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
 }
-</style>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+.photo {
+  float: left;
+}
 
-<script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script> 
-
-<script src="./scripts.js"></script>
-<script>
-
-$('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
-})
-
-</script>
-
-<style>
 
 .btn-dark-custom {
   background-color: #343a40; /* Slightly lighter than the default bg-dark */
@@ -43,6 +129,35 @@ $('#myModal').on('shown.bs.modal', function () {
   color: white;
 }
 
+/* CSS used here will be applied after bootstrap.css */
+.jumbotron{
+  position: relative;
+  z-index:-2;
+}
+
+#namecard{
+  align-content: center; 
+
+}
+
+#video-background { 
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+  width:100%;
+}
+
+.grid-item { width: 200px; }
+.grid-item--width2 { width: 400px; }
+
+.white-bold-text {
+  color: white;
+  font-weight: bold;
+}
 </style>
 
 </head>
@@ -50,32 +165,71 @@ $('#myModal').on('shown.bs.modal', function () {
 
 
 <body>
+
+  <header>
   <nav class="navbar navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Miguel's Asteroid</a>
+      <img src="./img/Highwind1_opt.png" style="transform: scale(0.9);"><a class="navbar-brand quote-banner" href="#">Miguel's Asteroid</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+          <h5 class="offcanvas-title quote-banner" id="offcanvasDarkNavbarLabel">Cockpit</h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        
+        
+        
         </div>
+        
+        
         <div class="offcanvas-body">
+
+          <div class="text-center">
+            <div class="d-inline-block text-start">
+              <img src="./img/headshot.jpg" class="rounded-circle" width="140" height="140" alt="Description of Image"></img>
+                <rect width="100%" height="100%" fill="#777"/>
+                <text x="50%" y="50%" fill="#777" dy=".3em">¡Wepa! Soy Miguel!</text>
+              <h2>Public Interest Communications </h2>
+              <p>Thanks for visiting my website hosted on an asteroid in uberspace. Find me on Linkedin
+                and Nostr.
+              </p>
+              <p><a class="btn btn-secondary" href="#">View biography &raquo;</a></p>
+            </div>
+          </div>
+
+
+
+          
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+  
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="https://migs.uber.space/">About</a>
+  
+              </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="https://library.miguelalmodo.com">Library</a>
+              <li class="nav-item">
+                <a class="nav-link" href="https://yakihonne.com/users/nprofile1qqswe9j5qhs356nps6e8lfz35tluzwtwmeug85h2z8pjl0fvvwvkjespr3mhxue69uhkummnw3ez6vp39eukz6mfdphkumn99e3k7mgpr3mhxue69uhkummnw3ez6vpj9eukz6mfdphkumn99e3k7mgpremhxue69uhkummnw3ez6vpn9ejx7unpveskxar0wfujummjvuq3gamnwvaz7tmjv4kxz7fwv3sk6atn9e5k7qg7waehxw309ahx7um5wgknqv3wv3hhyctxv93hgmmj0yhx7un8rfe7nx">Nostr</a>
+              </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Collaborate
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Content Production</a></li>
+                <li><a class="dropdown-item" href="#">Code</a></li>  
+                <li><a class="dropdown-item" href="#">Campaign Strategy</a></li>        
+              </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://migs.uber.space/blog">Chronicles</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://yakihonne.com/users/nprofile1qqswe9j5qhs356nps6e8lfz35tluzwtwmeug85h2z8pjl0fvvwvkjespr3mhxue69uhkummnw3ez6vp39eukz6mfdphkumn99e3k7mgpr3mhxue69uhkummnw3ez6vpj9eukz6mfdphkumn99e3k7mgpremhxue69uhkummnw3ez6vpn9ejx7unpveskxar0wfujummjvuq3gamnwvaz7tmjv4kxz7fwv3sk6atn9e5k7qg7waehxw309ahx7um5wgknqv3wv3hhyctxv93hgmmj0yhx7un8rfe7nx">Nostr</a>
-            </li>
+
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Resumes
@@ -85,200 +239,151 @@ $('#myModal').on('shown.bs.modal', function () {
                 <li><a class="dropdown-item" href="#">Public Interest Communications</a></li>          
               </ul>
             </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Garden
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Library</a></li>
+                <li><a class="dropdown-item" href="https://migs.uber.space/blog">Chronicles</a></li> 
+                <li><a class="dropdown-item" href="">Quote Shuffler</a></li>         
+              </ul>
+            </li>
+            
+            
+
+
+           
           </ul>
+          
         </div>
+        
       </div>
     </div>
   </nav>
+</header>
 
-<br>
+<body>
 
+
+
+
+
+
+
+
+
+
+  
 <section>
-  <div class="container my-5">
-    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
-      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
-        <h1 class="display-4 fw-bold lh-1">Miguel Almodóvar</h1>
-        <p class="lead">
-          Putting the COMM in C-O-M-M-U-N-I-T-Y!
-        </p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-          <!-- Button trigger modal 1 -->
-          <button type="button" class="btn btn-dark-custom" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-            Who is Miguel?
-          </button>
-          <!-- Modal 1 -->
-          <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel1">Biography</h5>
-                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <h4>Current Chapter</h4><p>
-                    I just turned 30 and and live in Puerto Rico with my dog, Kaido. 
-                  </p>
-                
-                <h4>Last Chapter</h4><p>My 
-                    existence is a stew of lived experiences with a unique window into 
-                    the proliferation of the Internet and it's influence on the way we 
-                    share information.
-                  </p>
+  <div class="my-5">
+    <div class="p-5 text-center bg-body-tertiary">
+      <div class="container py-5">
+        <h1 class="text-body-emphasis">Welcome to my Gummi Ship!</h1>
+        
+        <p class="col-lg-8 mx-auto lead">
+          Explore my digital playground in uberspace.
+          <a href="https://yakihonne.com/users/nprofile1qyw8wumn8ghj7mn0wd68ytfsxyh8jcttd95x7mnwv5hxxmmdqyw8wumn8ghj7mn0wd68ytfsxgh8jcttd95x7mnwv5hxxmmdqy08wumn8ghj7mn0wd68ytfsxvhxgmmjv9nxzcm5dae8jtn0wfnsz9rhwden5te0wfjkccte9ejxzmt4wvhxjmcpremhxue69uhkummnw3ez6vpj9ejx7unpveskxar0wfujummjvuqzpmyk2sz7zxn2vxrtylay2x30lsfedm083q7jagguxtaa933ej6txsnr0xw"> Follow me on Nostr </a>or <a href="mailto:contact@miguelalmodo.com"> send an email.</a>      </p>
 
+          <button class="btn btn-dark-custom btn-lg" type="button" onclick="window.location.href='https://library.miguelalmodo.com';">About</button>
+          <button class="btn btn-dark-custom btn-lg" type="button" onclick="window.location.href='https://portfolio.miguelalmodo.com';">Code</button>
+          <button class="btn btn-dark-custom btn-lg" type="button" onclick="window.location.href='https://library.miguelalmodo.com';">Library</button>
+      
+        
 
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Button trigger modal 2 -->
-          <button type="button" class="btn btn-dark-custom" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-          Let's Work Together
-          </button>
-          <!-- Modal 2 -->
-          <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel2">Let's Work Together</h5>
-                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <h4>Society at a Crossroads</h4>
-                  <p>The political division we see today is not by accident. In this dystopic society
-                    mired in controversy, tragedy, and a blatant disregard for humanity, movements need 
-                    a robust communication strategy and the power of decentralized internet protocols. </p>
-                 
-                  <h4>Cocreating Understanding</h4>  
-                    <p>The current moment demands that we learn how to talk to each other across political 
-                    and cultural divisions must broaden our collective understanding of how communication influences outcomes 
-                    beyond "strategic sharing". We
-                    </p>
-                    <p>
-                    <a href="https://github.com/miggymofongo"> 
-                    Github </a> and have <a href="https://nilfm.cc/"> a few friends in senior software engineer roles that 
-                      are helping guide</a>  my learning journey. </p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Button trigger modal 3 -->
-          <button type="button" class="btn btn-dark-custom" data-bs-toggle="modal" data-bs-target="#exampleModal3">
-            Blogs
-          </button>
-          <!-- Modal 3 -->
-          <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel3">I like to write</h5>
-                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <p>I host my own Bludit instance with blogs from my travels. </p>
-                  <p>Visit <a href="https://chronicles.miguelalmodo.com">my Chronicles page to check them</a>
-                  out!</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <button type="button" class="btn btn-dark-custom" data-bs-toggle="modal" data-bs-target="#exampleModal4">
-            Content Production
-          </button>
-          <!-- Modal 3 -->
-          <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel3">Captivate your Audience </h5>
-                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <p>I've supported advocates and organizations over the years in creating 
-                    engaging content for their communities. 
-                  </p>
-                  <h1>Videography</h1>
-                  <h1>Photography</h1>
-                  <h1>Audiography</h1>
-                  <p>Check out my portfolio!</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          
+        
         </div>
-      </div>
-      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-        <img class="center" src="./img/headshot.jpg" alt="headshot of Miguel" width="360">
-<br><br>
-      </div>
     </div>
   </div>
 </section>
 
-  
+
+
+
 <section>
-  <div class="container-fluid">
-  
-  <div><div class="card mb-4 text-center mx-auto" style="max-width: 75%;">
-      <div class="card-body">
-        <h5 class="card-title"><b>Kingdom Heart Quote Shuffler</b></h5>
-        <p class="card-text">I recently built a homemade web scraper in Python to scrape quotes off a database of my favorite video game, Kingdom Hearts.</p> 
-        <p>After scraping the quotes into a json file, I feed them into a small program that fetches and periodically rotates the quotes every 5 seconds.
-          <br>I then installed a Gummi-themed Kingdom Hearts font from <a href="https://github.com/Televo/kingdom-hearts-recollection">a dope Github repository </a> 
-        to make it LEGIT! Check it out below this paragraph.</p>
-        <p class="card-text">
-          <div class="'container-fluid" style="max-width: 800px; margin: auto;">
-            <div class="clearfix">
-              <div id="quoteBanner" class="quote-banner card-footer">
-                <blockquote class="blockquote mb-0">
-                  <p>Quote goes here</p>
-                  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                </blockquote>
-              </div>
-          <a href="https://github.com/miggymofongo" class="card-link">Check it out on Github!</a>
+
+
+
+  <div class="container px-4 py-5" style="background-color: #23272b;">
+    <h2 class="pb-2 border-bottom quote-banner">Good Communication fuels Good Relationships.</h2>
+
+    <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+      <div class="d-flex flex-column align-items-start gap-2">
+        <h3 class="fw-bold" style="color: aliceblue;">Communications for the Public Good</h3>
+        <p style="color: rgb(255, 255, 255);">The current media landscape looks grim. 
+          If you feel like your messaging is not hitting your audience how it needs to.
+           Communication should bring people together.
         </p>
+        <a href="#" class="btn btn-primary btn-lg">Schedule a Consultation</a>
+      </div>
+      <div class="row row-cols-1 row-cols-sm-2 g-4">
+        <div class="d-flex flex-column gap-2">
+          
+          <h4 class="fw-semibold mb-0" style="color: rgb(255, 255, 255);">Got something to say?</h4>
+          <p style="color: rgb(255, 255, 255);">Craft engaging content using photo, video,
+            or audio. Check out my portfolio of past work.
+          </p>
+        </div>
+
+        <div class="d-flex flex-column gap-2">
+         
+          <h4 class="fw-semibold mb-0" style="color: rgb(255, 255, 255);">Deploy Web Tools</h4>
+          <p style="color: rgb(255, 255, 255);">Are you sick of Google subscription fees
+            and silo'd infrastructure? Build a toolbox of ethical digital
+            tools for your organization.
+          </p>
+        </div>
+
+        <div class="d-flex flex-column gap-2">
+          
+          <h4 class="fw-semibold mb-0" style="color: rgb(255, 255, 255);">Strategize</h4>
+          <p style="color: rgb(255, 255, 255);">have you decided to change the things you cannot accept? movements need a robust
+            communication strategy and the power of a decentralized internet.</p>
+        </div>
+
+        <div class="d-flex flex-column gap-2">
+          
+          
+          <h4 class="fw-semibold mb-0" style="color: rgb(255, 255, 255);">Training</h4>
+          <p style="color: rgb(255, 255, 255);">It seems like there's a new thing every couple months.
+          Request a training to stay ahead of the crowd.</p>
+        </div></div>
       </div>
     </div>
+  </div>
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <span class="text-muted">© 2024 Miguel Almodóvar</span>
     </div>
-  </div>
-      
-      
-  </section>
-<section>
+  </footer>
 
-<div class="container my-5">
   
-    
-  </div>
-
-  <script src="./scripts.js"></script>
 
 
 
-<script src="https://unpkg.com/htmx.org@1.9.10" crossorigin="anonymous"></script>
+
 
   </body>
 </html>
+
