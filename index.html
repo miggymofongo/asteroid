@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+
 <title>El Asteroide De Miguel</title>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"></link>
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"></link>
 <link rel="stylesheet" href="./styles.css"></link>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="./infinite-scroll-docs.min.js"> </script>
-
 <script src="./scripts.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+
+
 <script>
 
 $('.container').infiniteScroll({
@@ -158,6 +158,15 @@ $('.container').infiniteScroll({
   color: white;
   font-weight: bold;
 }
+
+
+@font-face {
+
+font-family: KHGummi;
+src: url(./fonts/KHGummi.otf);
+font-weight:400;
+}
+
 </style>
 
 </head>
@@ -169,7 +178,9 @@ $('.container').infiniteScroll({
   <header>
   <nav class="navbar navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
-      <img src="./img/Highwind1_opt.png" style="transform: scale(0.9);"><a class="navbar-brand quote-banner" href="#">Miguel's Asteroid</a>
+      <img src="./img/Highwind1_opt.png" style="transform: scale(0.9);">
+      
+     <h4 class="navbar-brand" href="#" style="color: aliceblue; font-family: KHGummi;">Miguel's Asteroid</h4>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -178,28 +189,36 @@ $('.container').infiniteScroll({
         
         <div class="offcanvas-header">
           <h5 class="offcanvas-title quote-banner" id="offcanvasDarkNavbarLabel">Cockpit</h5>
+        
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        
-        
-        
+
         </div>
         
         
         <div class="offcanvas-body">
 
           <div class="text-center">
-            <div class="d-inline-block text-start">
-              <img src="./img/headshot.jpg" class="rounded-circle" width="140" height="140" alt="Description of Image"></img>
-                <rect width="100%" height="100%" fill="#777"/>
-                <text x="50%" y="50%" fill="#777" dy=".3em">¡Wepa! Soy Miguel!</text>
+            <div class="d-inline-block text-center">
+              <img src="./img/WEPA.png"  
+              style="width: 300px; height: 300px; object-fit: cover;" alt="Headshot of Miguel"></img>
+                
+                <br>
               <h2>Public Interest Communications </h2>
-              <p>Thanks for visiting my website hosted on an asteroid in uberspace. Find me on Linkedin
-                and Nostr.
+              <a href="mailto:contact@miguelalmodo.com"><img src="./img/email.png" alt="" style="width: 50px; height: 50px;"></a>
+              <a href="https://yakihonne.com/users/nprofile1qyw8wumn8ghj7mn0wd68ytfsxyh8jcttd95x7mnwv5hxxmmdqyw8wumn8ghj7mn0wd68ytfsxgh8jcttd95x7mnwv5hxxmmdqy08wumn8ghj7mn0wd68ytfsxvhxgmmjv9nxzcm5dae8jtn0wfnsz9rhwden5te0wfjkccte9ejxzmt4wvhxjmcpremhxue69uhkummnw3ez6vpj9ejx7unpveskxar0wfujummjvuqzpmyk2sz7zxn2vxrtylay2x30lsfedm083q7jagguxtaa933ej6txsnr0xw"><img src="./img/running-nostr.gif" style="width: 50px; height: 50px;"></a>
+              <a href="https://www.linkedin.com/in/miguelalmodo/"><img src="./img/LinkedIN.png" style="width: 50px; height: 50px;"></a>
+              <a href="https://www.github.com/miggymofongo/"><img src="./img/Github.png" style="width: 50px; height: 50px;"></a>
+              <br><br>
+              <p>This website is hosted on an asteroid in uberspace! 
+              Explore my digital playground and find ways we can 
+              collaborate.
               </p>
-              <p><a class="btn btn-secondary" href="#">View biography &raquo;</a></p>
+              
+              <button class="btn btn-secondary" href="#" disabled>View biography &raquo;</button>
             </div>
-          </div>
-
+            </div>
+          
+<br>
 
 
           
@@ -265,30 +284,20 @@ $('.container').infiniteScroll({
   </nav>
 </header>
 
-<body>
 
-
-
-
-
-
-
-
-
-
-  
 <section>
   <div class="my-5">
     <div class="p-5 text-center bg-body-tertiary">
       <div class="container py-5">
-        <h1 class="text-body-emphasis">Welcome to my Gummi Ship!</h1>
+        <h1 class="text-body-emphasis quote-banner">All aboard the Gummi Ship!</h1>
         
         <p class="col-lg-8 mx-auto lead">
-          Explore my digital playground in uberspace.
-          <a href="https://yakihonne.com/users/nprofile1qyw8wumn8ghj7mn0wd68ytfsxyh8jcttd95x7mnwv5hxxmmdqyw8wumn8ghj7mn0wd68ytfsxgh8jcttd95x7mnwv5hxxmmdqy08wumn8ghj7mn0wd68ytfsxvhxgmmjv9nxzcm5dae8jtn0wfnsz9rhwden5te0wfjkccte9ejxzmt4wvhxjmcpremhxue69uhkummnw3ez6vpj9ejx7unpveskxar0wfujummjvuqzpmyk2sz7zxn2vxrtylay2x30lsfedm083q7jagguxtaa933ej6txsnr0xw"> Follow me on Nostr </a>or <a href="mailto:contact@miguelalmodo.com"> send an email.</a>      </p>
+          Thanks for visiting my webpage. Check out a book, my projects,
+          or download a resume from my asteroid!
+                 </p>
 
-          <button class="btn btn-dark-custom btn-lg" type="button" onclick="window.location.href='https://library.miguelalmodo.com';">About</button>
-          <button class="btn btn-dark-custom btn-lg" type="button" onclick="window.location.href='https://portfolio.miguelalmodo.com';">Code</button>
+          <button class="btn btn-dark-custom btn-lg" type="button" onclick="window.location.href='https://migs.uber.space/about.html';" disabled>About</button>
+          <button class="btn btn-dark-custom btn-lg" type="button" onclick="window.location.href='https://github.com/miggymofongo';">Code</button>
           <button class="btn btn-dark-custom btn-lg" type="button" onclick="window.location.href='https://library.miguelalmodo.com';">Library</button>
       
         
@@ -307,39 +316,105 @@ $('.container').infiniteScroll({
 
 
   <div class="container px-4 py-5" style="background-color: #23272b;">
-    <h2 class="pb-2 border-bottom quote-banner">Let's collaborate.</h2>
+  <h2 class="pb-2 border-bottom" style="color: aliceblue; font-family: KHGummi;">Let's collaborate.
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     &nbsp;&nbsp;&nbsp;&#160;&#160;&#160;&#160; 
+     &nbsp;&nbsp;&nbsp;&#160;&#160;&#160;&#160;  
+   
+     <img src="img/leroy_opt.png">   </h2>
 
     <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
       <div class="d-flex flex-column align-items-start gap-2">
         <h3 class="fw-bold" style="color: aliceblue;">Communications for the Public Good</h3>
-        <p style="color: rgb(255, 255, 255);">The current media landscape looks grim. 
-          It's on us to take back the commons from the corporations that are currently 
-          tearing our society apart.</p>
-        <a href="#" class="btn btn-primary btn-lg">Schedule a Consultation</a>
+        <p style="color: rgb(255, 255, 255);">The corporate social media landscape looks grim. 
+          They privatize our means of communication over the Internet and tear our society 
+          apart with the constant bombardment of adverrtising and antagonizing algoriths. 
+          Movements in 2024 need a robust communication strategy and the power of a 
+          decentralized internet. It's on us to take back the digital commons once and for all. 
+          </a></p>
+          <div class="container">
+          
+          <h5 style="color: aliceblue;">Contact form coming soon! Email me at contact@miguelalmodo.com for now.</h5> 
+         
+         
+          <!-- <form onsubmit="sendEmail()" style="color: rgb(255, 255, 255);">
+            <h4 style="color: rgb(255, 255, 255);">Send me an email and get a response back
+          within 48 hours! </h4>
+            <label for="text">Your Name:</label>
+            <input type="text" id="name" placeholder="Your name" required>
+
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" placeholder="Email id" required>
+            
+            <label for="message">Your Message:</label>
+            <textarea id="message" rows="4" placeholder="What are your thoughts?" required></textarea>
+            
+
+            <button type="submit">Send Message</button>
+        </form>
+        <script src="./smtp.js"></script>
+        <script>
+            function sendEmail(){
+              Email.sendEmail({
+                Host: "smtppro.zoho.com",
+                Username : "contact@miguelalmodo.com",
+                Password : "EUfnEQ47d7iM",
+                To : "recipient@example.com",
+                From : document.getElementById("email").value,
+                Subject: "We met at the protest",
+                Body : "Free Palestine!"
+              }).then(
+                message => alert(message)
+              );
+
+            }
+
+
+        </script>
+      -->
+
+          </div>
+
+          
+
+
+        <a href="mailto:contact@miguelalmodo.com" class="btn btn-primary btn-lg">
+          Click to open a self - addressed email message in your favorite
+           client.</a>
+      
+      
+      
+      
+      
+      
       </div>
       <div class="row row-cols-1 row-cols-sm-2 g-4">
         <div class="d-flex flex-column gap-2">
           
-          <h4 class="fw-semibold mb-0" style="color: rgb(255, 255, 255);">Got something to say?</h4>
-          <p style="color: rgb(255, 255, 255);">Craft engaging content using photo, video,
-            or audio. Check out my portfolio of past work.
+          <h4 class="fw-semibold mb-0" style="color: rgb(255, 255, 255);">Move beyond strategic sharing.</h4>
+          <p style="color: rgb(255, 255, 255);">
+          Find the right medium and channels and multiply
+          the impact of your story with a<a href="https://opportunityagenda.org/our-tools/vpsa/"> 
+            VPSA framework (Value, Problem, Solution, Action)</a>. 
+          Craft your message with intention and authenticity.
           </p>
         </div>
 
         <div class="d-flex flex-column gap-2">
          
-          <h4 class="fw-semibold mb-0" style="color: rgb(255, 255, 255);">Deploy Web Tools</h4>
-          <p style="color: rgb(255, 255, 255);">Are you sick of Google subscription fees
-            and silo'd infrastructure? Build a toolbox of ethical digital
-            tools for your organization.
+          <h4 class="fw-semibold mb-0" style="color: rgb(255, 255, 255);">Open source strategy.</h4>
+          <p style="color: rgb(255, 255, 255);">Break the tech monopoly with open source software.
+            Power map your "big bosses" and chart your path to sustainable change.
+            
           </p>
         </div>
 
         <div class="d-flex flex-column gap-2">
           
-          <h4 class="fw-semibold mb-0" style="color: rgb(255, 255, 255);">Strategize</h4>
-          <p style="color: rgb(255, 255, 255);">have you decided to change the things you cannot accept? movements need a robust
-            communication strategy and the power of a decentralized internet.</p>
+          <h4 class="fw-semibold mb-0" style="color: rgb(255, 255, 255);">Cocreate meaning with your community.</h4>
+          <p style="color: rgb(255, 255, 255);">Rally your 
+          community around shared values using a VPSA (Values, Problem, Solution, Action)
+          framework.</p>
         </div>
 
         <div class="d-flex flex-column gap-2">
@@ -347,7 +422,8 @@ $('.container').infiniteScroll({
           
           <h4 class="fw-semibold mb-0" style="color: rgb(255, 255, 255);">Training</h4>
           <p style="color: rgb(255, 255, 255);">It seems like there's a new thing every couple months.
-          Request a training to stay ahead of the crowd.</p>
+          Have questions about crypto or decentralized social media? 
+          Request a training to stay ahead of the curve.</p>
         </div></div>
       </div>
     </div>
@@ -385,4 +461,3 @@ $('.container').infiniteScroll({
 
   </body>
 </html>
-
