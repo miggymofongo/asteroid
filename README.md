@@ -1,3 +1,30 @@
+
+3.07.24
+
+my landing page looks different now! i added a whole mini "about me" section in the off canvas nav bar with icons that lead to my email, Yakihonne, LinkedIn, and lightning wallet info.  I have to spend more time on the about me page and deck it out.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 1.22.24 update
 
 I pushed again today. Trying to set up a self hosted nip-05 verifier but am having  no success yet.
