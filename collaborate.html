@@ -1,160 +1,307 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
 <head>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <title>El Asteroide De Miguel</title>
-        
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"></link>
-        
-        <link rel="stylesheet" href="./styles.css"></link>
-        
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-        
-        <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script> 
-        
-        <script src="./scripts.js"></script>
-        
-        
-        <style>
-        
-        .center {
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
-          width: 50%;
-        }
-        
-        .photo {
-          float: left;
-        }
-        
-        
-        .btn-dark-custom {
-          background-color: #343a40; /* Slightly lighter than the default bg-dark */
-          color: white;
-        }
-        
-        .btn-dark-custom:hover {
-          background-color: #23272b; /* Darken on hover for interaction feedback */
-          color: white;
-        }
-        
-        /* CSS used here will be applied after bootstrap.css */
-        .jumbotron{
-          position: relative;
-          z-index:-2;
-        }
-        
-        #video-background { 
-          position: fixed;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          overflow: hidden;
-          z-index: -1;
-          width:100%;
-        }
-        </style>
-        
-        </head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>El Asteroide De Miguel</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"></link>
+
+<link rel="stylesheet" href="./styles.css"></link>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="./infinite-scroll-docs.min.js"> </script>
+
+<script src="./scripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+<script>
+
+$('.container').infiniteScroll({
+  // options
+  path: '.pagination__next',
+  append: '.post',
+  history: false,
+});
+
+
+</script>
+
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .b-example-divider {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+  .b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
+
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .btn-bd-primary {
+    --bd-violet-bg: #712cf9;
+    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bd-violet-bg);
+    --bs-btn-border-color: var(--bd-violet-bg);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #6528e0;
+    --bs-btn-hover-border-color: #6528e0;
+    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #5a23c8;
+    --bs-btn-active-border-color: #5a23c8;
+  }
+
+  .bd-mode-toggle {
+    z-index: 1500;
+  }
+
+  .bd-mode-toggle .dropdown-menu .active .bi {
+    display: block !important;
+  }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.photo {
+  float: left;
+}
+
+
+.btn-dark-custom {
+  background-color: #343a40; /* Slightly lighter than the default bg-dark */
+  color: white;
+}
+
+.btn-dark-custom:hover {
+  background-color: #23272b; /* Darken on hover for interaction feedback */
+  color: white;
+}
+
+/* CSS used here will be applied after bootstrap.css */
+.jumbotron{
+  position: relative;
+  z-index:-2;
+}
+
+#namecard{
+  align-content: center; 
+
+}
+
+#video-background { 
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+  width:100%;
+}
+
+.grid-item { width: 200px; }
+.grid-item--width2 { width: 400px; }
+
+.white-bold-text {
+  color: white;
+  font-weight: bold;
+}
+</style>
 
 </head>
 
 
+
 <body>
-<header>
-    <nav class="navbar navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Miguel's Asteroid</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="https://migs.uber.space/">About</a>
-      
-                  </li>
-    
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://yakihonne.com/users/nprofile1qqswe9j5qhs356nps6e8lfz35tluzwtwmeug85h2z8pjl0fvvwvkjespr3mhxue69uhkummnw3ez6vp39eukz6mfdphkumn99e3k7mgpr3mhxue69uhkummnw3ez6vpj9eukz6mfdphkumn99e3k7mgpremhxue69uhkummnw3ez6vpn9ejx7unpveskxar0wfujummjvuq3gamnwvaz7tmjv4kxz7fwv3sk6atn9e5k7qg7waehxw309ahx7um5wgknqv3wv3hhyctxv93hgmmj0yhx7un8rfe7nx">Nostr</a>
-                  </li>
-    
-    
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Collaborate
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="#">Content Production</a></li>
-                    <li><a class="dropdown-item" href="#">Code</a></li>  
-                    <li><a class="dropdown-item" href="#">Campaign Strategy</a></li>        
-                  </ul>
-                </li>
-    
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Resumes
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="#">Hospitality</a></li>
-                    <li><a class="dropdown-item" href="#">Public Interest Communications</a></li>          
-                  </ul>
-                </li>
-    
-    
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Garden
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="#">Library</a></li>
-                    <li><a class="dropdown-item" href="https://migs.uber.space/blog">Chronicles</a></li> 
-                    <li><a class="dropdown-item" href="">Quote Shuffler</a></li>         
-                  </ul>
-                </li>
-    
-    
-    
-                
-    
-    
-    
-               
-              </ul>
+
+  <header>
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <img src="./img/Highwind1_opt.png" style="transform: scale(0.9);"><a class="navbar-brand quote-banner" href="#">Miguel's Asteroid</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title quote-banner" id="offcanvasDarkNavbarLabel">Cockpit</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        
+        
+        
+        </div>
+        
+        
+        <div class="offcanvas-body">
+
+          <div class="text-center">
+            <div class="d-inline-block text-start">
+              <img src="./img/headshot.jpg" class="rounded-circle" width="140" height="140" alt="Description of Image"></img>
+                <rect width="100%" height="100%" fill="#777"/>
+                <text x="50%" y="50%" fill="#777" dy=".3em">¡Wepa! Soy Miguel!</text>
+              <h2>Public Interest Communications </h2>
+              <p>Thanks for visiting my website hosted on an asteroid in uberspace. Find me on Linkedin
+                and Nostr.
+              </p>
+              <p><a class="btn btn-secondary" href="#">View biography &raquo;</a></p>
             </div>
           </div>
-        </div>
-      </nav>
 
+
+
+          
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+  
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="https://migs.uber.space/">About</a>
+  
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="https://yakihonne.com/users/nprofile1qqswe9j5qhs356nps6e8lfz35tluzwtwmeug85h2z8pjl0fvvwvkjespr3mhxue69uhkummnw3ez6vp39eukz6mfdphkumn99e3k7mgpr3mhxue69uhkummnw3ez6vpj9eukz6mfdphkumn99e3k7mgpremhxue69uhkummnw3ez6vpn9ejx7unpveskxar0wfujummjvuq3gamnwvaz7tmjv4kxz7fwv3sk6atn9e5k7qg7waehxw309ahx7um5wgknqv3wv3hhyctxv93hgmmj0yhx7un8rfe7nx">Nostr</a>
+              </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Collaborate
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Content Production</a></li>
+                <li><a class="dropdown-item" href="#">Code</a></li>  
+                <li><a class="dropdown-item" href="#">Campaign Strategy</a></li>        
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Resumes
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Hospitality</a></li>
+                <li><a class="dropdown-item" href="#">Public Interest Communications</a></li>          
+              </ul>
+            </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Garden
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Library</a></li>
+                <li><a class="dropdown-item" href="https://migs.uber.space/blog">Chronicles</a></li> 
+                <li><a class="dropdown-item" href="">Quote Shuffler</a></li>         
+              </ul>
+            </li>
+            
+            
+
+
+           
+          </ul>
+          
+        </div>
+        
+      </div>
+    </div>
+  </nav>
 </header>
 
+<section>
+  <div class="my-5">
+    <div class="p-5 text-center bg-body-tertiary">
+      <div class="container py-5">
+        <h1 class="text-body-emphasis">Got a cool idea? Let's collaborate.</h1>
+        
+        <p class="col-lg-8 mx-auto lead">
+          Explore my digital playground in uberspace.
+          <a href="https://yakihonne.com/users/nprofile1qyw8wumn8ghj7mn0wd68ytfsxyh8jcttd95x7mnwv5hxxmmdqyw8wumn8ghj7mn0wd68ytfsxgh8jcttd95x7mnwv5hxxmmdqy08wumn8ghj7mn0wd68ytfsxvhxgmmjv9nxzcm5dae8jtn0wfnsz9rhwden5te0wfjkccte9ejxzmt4wvhxjmcpremhxue69uhkummnw3ez6vpj9ejx7unpveskxar0wfujummjvuqzpmyk2sz7zxn2vxrtylay2x30lsfedm083q7jagguxtaa933ej6txsnr0xw"> Follow me on Nostr </a>or <a href="mailto:contact@miguelalmodo.com"> send an email.</a>      </p>
 
-    <section>
-        <div class="p-5 mb-4 bg-body-tertiary rounded-3">
-          <div class="container-fluid py-5">
-            <h1 class="display-5 fw-bold">Welcome to my asteroid.</h1>
-            <p class="col-md-8 fs-4">Check out my portfolio and explore my digital playground in uberspace.
-              <a href="https://yakihonne.com/users/nprofile1qyw8wumn8ghj7mn0wd68ytfsxyh8jcttd95x7mnwv5hxxmmdqyw8wumn8ghj7mn0wd68ytfsxgh8jcttd95x7mnwv5hxxmmdqy08wumn8ghj7mn0wd68ytfsxvhxgmmjv9nxzcm5dae8jtn0wfnsz9rhwden5te0wfjkccte9ejxzmt4wvhxjmcpremhxue69uhkummnw3ez6vpj9ejx7unpveskxar0wfujummjvuqzpmyk2sz7zxn2vxrtylay2x30lsfedm083q7jagguxtaa933ej6txsnr0xw"> Find me on Nostr </a>or <a href="mailto:contact@miguelalmodo.com">send an email to 
-                contact@miguelalmodo.com
-              </a>
-            </p>
-            <button class="btn btn-dark-custom btn-lg" type="button" onclick="window.location.href='https://library.miguelalmodo.com';">Library</button>
-            <button class="btn btn-dark-custom btn-lg" type="button" onclick="window.location.href='https://portfolio.miguelalmodo.com';">Portfolio</button>
-            <button class="btn btn-dark-custom btn-lg" type="button" onclick="window.location.href='https://library.miguelalmodo.com';">Quote Shuffler</button>
-          </div>
+          <button class="btn btn-dark-custom btn-lg" type="button" onclick="window.location.href='https://library.miguelalmodo.com';">About</button>
+          <button class="btn btn-dark-custom btn-lg" type="button" onclick="window.location.href='https://portfolio.miguelalmodo.com';">Code</button>
+          <button class="btn btn-dark-custom btn-lg" type="button" onclick="window.location.href='https://library.miguelalmodo.com';">Library</button>
+      
+        
+
+        
         </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+      <section>
+        <div class="jumbotron">
+          <video id="video-background" preload=""  autoplay="" loop="">
+            <source src="https://v.nostr.build/vmol.webm" type="video/mp4">
+          </video>
+        </div>
+      
       </section>
+    </section>
+
+
 
 
       <section>
@@ -171,35 +318,43 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel2">Public Interest Communications</h5>
+            <h5 class="modal-title" id="exampleModalLabel2"><a 
+              href="https://realgoodcenter.jou.ufl.edu/about/what-is-public-interest-communications/">
+              Public Interest Communications </a></h5>
             <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <h4>Society at a Crossroads</h4>
-            <p>The political division we see today is not by accident. In this dystopic society
-              mired in controversy, tragedy, and a blatant disregard for our shared humanity, 
-              movements must adopt a robust communication strategy and the power of open 
-              sourced internet protocols. </p>
+            <h4>Positive Changes for the Greater Good</h4>
+            <p> The ultimate aim of Public Interest Communications is to bring about substantial 
+              and lasting positive behavioral shifts in the community that goes beyond the 
+              specific concerns of any individual organization. Change, in 
+              this context, refers to either the initiation or cessation of behaviors existing
+               ones among individuals.  </p>
 
-           <h4>Corporate Ownership of the Means of Communication</h4>
-              <p>Corporate tech corporations have a monopoly on our communications infrastructure. 
-                This gives them unfair power over the mainstream narrative and the ability to 
-                control what is or what is not possible. Antagonizing algorithms and the constant
-              bombardment of advertising fuel a hyperconsumer that props up a war economy.</p>
-
-            <h4>Cocreating Understanding</h4>  
-              <p>The current moment demands that we learn how to talk to each other across political 
-              and cultural divisions and broaden our collective understanding of how communication 
-              influences outcomes beyond "strategic sharing" and fundraising.</p>
-              </p>
-                <h4>Communications Infrastructure</h4>  
-                <p>The current moment demands that we learn how to talk to each other across political 
-                and cultural divisions must broaden our collective understanding of how communication influences outcomes 
-                beyond "strategic sharing". We
-                </p>
-          </div>
+           
+            <h4>Cocreate Understanding</h4>  
+            <p>The moment demands that we talk across political and cultural lines 
+             to broaden our collective understanding of issues like climate change, systemic
+             racism, colonialism, and wealth inequality. Leveraging the internet is 
+             prerequisite for building transnational sovereignty.</p>
+              
+            <h4>Communications Infrastructure</h4>  
+            <p>Cut through the noise with web appications that organize your community outside
+             of the main stream and around your message. Open source protocols like 
+            </p>
+              
+            <h4>Corporate Ownership of the Narrative</h4>
+            <p>Corporate tech has a monopoly on our communications infrastructure. 
+            This gives them undue sway over the mainstream narrative and the ability to 
+            control what is or what is not possible. Movements must adopt a robust 
+            communication strategy that leverages the power of open sourced "freedom tech". Antagonizing algorithms and the constant
+            bombardment of advertising fuel a hyperconsumer that props up a war economy.</p>
+  
+          
+          
+              </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           </div>
@@ -215,17 +370,53 @@
 
 <section>
 
-  <section>
-    <div class="p-5 mb-4 bg-body-tertiary rounded-3">
-    <div class="jumbotron">
-      <video id="video-background" preload=""  autoplay="" loop="">
-        <source src="https://v.nostr.build/vmol.webm" type="video/mp4">
-        <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
-      </video>
-    </div>
-  </div>
-  </section>
+  <button type="button" class="btn btn-dark-custom" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+    Content Production
+  </button>
+  
+  
+  <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel4">I like to write</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h1>Bludit</h1>
+          <p>I host a Bludit instance with blogs from my past travels. Visit <a href="https://chronicles.miguelalmodo.com">
+            my Chronicles page to check them</a> out! </p>
+  
+            <h1>Yakihonne</h1>
+            <p>I'm in the process of moving all of my past blog pieces to the Nostr protocol. <a href="https://yakihonne.com/users/nprofile1qyw8wumn8ghj7mn0wd68ytfsxyh8jcttd95x7mnwv5hxxmmdqyw8wumn8ghj7mn0wd68ytfsxgh8jcttd95x7mnwv5hxxmmdqy08wumn8ghj7mn0wd68ytfsxvhxgmmjv9nxzcm5dae8jtn0wfnsz9rhwden5te0wfjkccte9ejxzmt4wvhxjmcpremhxue69uhkummnw3ez6vpj9ejx7unpveskxar0wfujummjvuqzpmyk2sz7zxn2vxrtylay2x30lsfedm083q7jagguxtaa933ej6txsnr0xw">
+              Visit my profile on Yakihonne
+              by clicking here.</a> Ask me about Nostr! </p>
+        
+              <h1>Videography</h1>
+              <p>I created <a href="https://v.nostr.build/vmol.webm">a hype video for an annual conference at California
+                Youth Connection,</a> a California-based nonprofit that organizes young people to advocate for change in 
+                child welfare and juvenile justice systems.
+              </p>
+        
+        
+            </div>
+  
+  
+               <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+             </div>
+            </div>
+           </div>
+         </div>
 </section>
+
+
+
+<section>
+
+  
 
 
 
