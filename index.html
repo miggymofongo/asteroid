@@ -167,6 +167,25 @@ src: url(./fonts/KHGummi.otf);
 font-weight:400;
 }
 
+video {
+      max-width: 100%; /* Ensure video doesn't exceed the container width */
+      height: auto; /* Maintain aspect ratio */
+    }
+  
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.video-container video {
+  max-width: 100%;
+  height: auto;
+}
+
 </style>
 
 </head>
@@ -197,7 +216,37 @@ font-weight:400;
         
         <div class="offcanvas-body">
 
+          <div class="text-center">
+            <div class="d-inline-block text-center">
+              <img src="./img/WEPA.png" alt="headshot of miguel yelling WEPA!" 
+              style="width: 300px; height: 300px; object-fit: cover;" alt="Headshot of Miguel"></img>
                 
+              <br>
+              <h2>Public Interest Communications </h2>
+              <a href="mailto:contact@miguelalmodo.com"><img src="./img/email.png" alt="mail icon" style="width: 50px; height: 50px;"></a>
+              <a href="https://yakihonne.com/users/nprofile1qyw8wumn8ghj7mn0wd68ytfsxyh8jcttd95x7mnwv5hxxmmdqyw8wumn8ghj7mn0wd68ytfsxgh8jcttd95x7mnwv5hxxmmdqy08wumn8ghj7mn0wd68ytfsxvhxgmmjv9nxzcm5dae8jtn0wfnsz9rhwden5te0wfjkccte9ejxzmt4wvhxjmcpremhxue69uhkummnw3ez6vpj9ejx7unpveskxar0wfujummjvuqzpmyk2sz7zxn2vxrtylay2x30lsfedm083q7jagguxtaa933ej6txsnr0xw"><img src="./img/running-nostr.gif" alt="running nostrich gif" style="width: 50px; height: 50px;"></a>
+              <a href="https://www.linkedin.com/in/miguelalmodo/"><img src="./img/LinkedIN.png" alt="linkedin logo" style="width: 50px; height: 50px;"></a>
+              <a href="https://www.github.com/miggymofongo/"><img src="./img/Github.png" alt="github logo" style="width: 50px; height: 50px;"></a>
+              <img src="./img/lightning.png" style="width: 80px; height: 80px; align-items: center;">
+              <br><br>
+              <h6>Zap me Bitcoin!<br>ancientwildflower33459@getalby.com</h6> <img src="./img/code.png" style="width: 100px; height:100px;">
+              <div style= "text-align: end;">
+
+
+              </div>
+           
+              <!--
+                <button class="btn btn-secondary" href="#" disabled>View biography &raquo;</button>
+              -->
+            
+            
+              </div>
+            </div>
+          
+<br>
+
+
+          
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 
   
@@ -210,7 +259,7 @@ font-weight:400;
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="https://yakihonne.com/users/nprofile1qqswe9j5qhs356nps6e8lfz35tluzwtwmeug85h2z8pjl0fvvwvkjespr3mhxue69uhkummnw3ez6vp39eukz6mfdphkumn99e3k7mgpr3mhxue69uhkummnw3ez6vpj9eukz6mfdphkumn99e3k7mgpremhxue69uhkummnw3ez6vpn9ejx7unpveskxar0wfujummjvuq3gamnwvaz7tmjv4kxz7fwv3sk6atn9e5k7qg7waehxw309ahx7um5wgknqv3wv3hhyctxv93hgmmj0yhx7un8rfe7nx">Blog</a>
+                <a class="nav-link" href="https://yakihonne.com/users/nprofile1qqswe9j5qhs356nps6e8lfz35tluzwtwmeug85h2z8pjl0fvvwvkjespr3mhxue69uhkummnw3ez6vp39eukz6mfdphkumn99e3k7mgpr3mhxue69uhkummnw3ez6vpj9eukz6mfdphkumn99e3k7mgpremhxue69uhkummnw3ez6vpn9ejx7unpveskxar0wfujummjvuq3gamnwvaz7tmjv4kxz7fwv3sk6atn9e5k7qg7waehxw309ahx7um5wgknqv3wv3hhyctxv93hgmmj0yhx7un8rfe7nx">Nostr</a>
               </li>
 
 
@@ -242,6 +291,7 @@ font-weight:400;
               </a>
               <ul class="dropdown-menu dropdown-menu-dark">
                  <li><a class="dropdown-item" href="https://library.miguelalmodo.com/#">Bookshelf</a></li>
+                <li><a class="dropdown-item" href="https://migs.uber.space/blog">Chronicles</a></li> 
                 <li><a class="dropdown-item" href="https://github.com/miggymofongo/asteroid/blob/main/scripts.js">Quote Shuffler</a></li>         
               </ul>
             </li>
@@ -251,32 +301,7 @@ font-weight:400;
 
            
           </ul>
-          <div class="text-center">
-            <div class="d-inline-block text-center">
-              <img src="./img/WEPA.png" alt="headshot of miguel yelling WEPA!" 
-              style="width: 300px; height: 300px; object-fit: cover;" alt="Headshot of Miguel"></img>
-                
-              <br>
-              <h2>Public Interest Communications </h2>
-              <a href="mailto:contact@miguelalmodo.com"><img src="./img/email.png" alt="mail icon" style="width: 50px; height: 50px;"></a>
-              <a href="https://yakihonne.com/users/nprofile1qyw8wumn8ghj7mn0wd68ytfsxyh8jcttd95x7mnwv5hxxmmdqyw8wumn8ghj7mn0wd68ytfsxgh8jcttd95x7mnwv5hxxmmdqy08wumn8ghj7mn0wd68ytfsxvhxgmmjv9nxzcm5dae8jtn0wfnsz9rhwden5te0wfjkccte9ejxzmt4wvhxjmcpremhxue69uhkummnw3ez6vpj9ejx7unpveskxar0wfujummjvuqzpmyk2sz7zxn2vxrtylay2x30lsfedm083q7jagguxtaa933ej6txsnr0xw"><img src="./img/running-nostr.gif" alt="running nostrich gif" style="width: 50px; height: 50px;"></a>
-              <a href="https://www.linkedin.com/in/miguelalmodo/"><img src="./img/LinkedIN.png" alt="linkedin logo" style="width: 50px; height: 50px;"></a>
-              <a href="https://www.github.com/miggymofongo/"><img src="./img/Github.png" alt="github logo" style="width: 50px; height: 50px;"></a>
-              <img src="./img/lightning.png" style="width: 80px; height: 80px; align-items: center;">
-              <br><br>
-              <h6>Zap me Bitcoin!ancientwildflower33459@getalby.com</h6> <img src="./img/code.png" style="width: 100px; height:100px;">
-              <div style= "text-align: end;">
-
-
-              </div>
-           
-              <!--
-                <button class="btn btn-secondary" href="#" disabled>View biography &raquo;</button>
-              -->
-            
-            
-              </div>
-            </div>
+          
         </div>
         
       </div>
@@ -291,7 +316,7 @@ font-weight:400;
       <div class="container py-5">
         <h1 class="text-body-emphasis quote-banner">All aboard the Gummi Ship!</h1>
         
-        <p class="col-lg-8 mx-auto lead" style="color: black;">
+        <p class="col-lg-8 mx-auto lead">
           Thanks for visiting my asteroid. Explore the depths of uberspace
           while we battle space pirates and save worlds from corporate tech!
                  </p>
@@ -306,79 +331,143 @@ font-weight:400;
   </div>
 </section>
 
-<div class="b-example-divider"></div>
-
-
-<!--
-
-<h2 class="title-h2 ">L'horloge</h2>
-		  
-
-
-<div class="french">Dont le doigt nous menace et nous dit : <em>" Souviens-toi !</em></div>
-<div class="english">whose hand threatens us and says <em>"Remember!</em></div>
-<div class="french">Les vibrantes Douleurs dans ton coeur plein d'effroi</div>
-<div class="english">Vibrating pains will soon pierce</div>
-<div class="french">Se planteront bientôt comme dans une cible,</div>
-<div class="english">your heart like a bulls-eye,</div>
-<div>&nbsp;</div>
-<div>
-<em>Charles Baudelaire</em></div>
-<div>&nbsp;</div>
-<div>&nbsp;</div>
-<div>&nbsp;</div>
-<h2 style="text-align: right;">
-  <span class="button2" 
-  onclick="changecss2('.english','display','none', 'block')">
-  english</span> <span class="button2" onclick="changecss2('.french','display','block', 'none')">
-    french</span></h2>
-
--->
-
-
-
-
 <section>
-
-  <div class="container px-4 py-5" id="featured-3">
-    <h2 class="pb-2 border-bottom" style="font-family: KHGummi;">Communication for the public interest.</h2>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-      <div class="feature col">
-        <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-        </div>
-        <h3 class="fs-2 text-body-emphasis">Community Building</h3>
+<div class="video-container">
+  <video src="https://v.nostr.build/7GeB3.mp4" style="align-items: center;" controls>
+Carta de Presentacion para PlenitudPR
+  </video>
+</div>
+</section>
 
 
-        <p>Communication is key to every relationship!
-          Cut through the noise with web-based instances of tools like Nostr Relays
-          or ActivityPub Servers to build connective tissue in your community.</p>
+<section style="background-color: #23272b;">
+
+
+
+  <div class="container px-4 py-5" style="background-color: #23272b;">
+  <h2 class="pb-2 border-bottom" style="color: aliceblue; font-family: KHGummi;">Let's collaborate.
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     &nbsp;&nbsp;&nbsp;&#160;&#160;&#160;&#160; 
+     &nbsp;&nbsp;&nbsp;&#160;&#160;&#160;&#160;  
+   
+     <img src="img/leroy_opt.png" alt="pic of leroy from the movie leroy and stich">   </h2>
+
+    <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+      <div class="d-flex flex-column align-items-start gap-2">
+        <h3 class="fw-bold" style="color: aliceblue;">Communications for the Public Good</h3>
+        <p style="color: rgb(255, 255, 255);">The <a
+           href="https://migs.uber.space/blog/corporate-social-media-is-killing-us">
+           corporate social media landscape looks grim.</a>
+          They are tearing our society apart apart with the constant 
+          bombardment of advertising and antagonizing algorithms. 
+          Movements in 2024 need a robust communication strategy and the power of a 
+          decentralized internet. It's on us to take back the digital commons once and for all. 
+          </a></p>
+          <!-- <div class="container">         
+         
+          <form onsubmit="sendEmail()" style="color: rgb(255, 255, 255);">
+            <h4 style="color: rgb(255, 255, 255);">Send me an email and get a response back
+          within 48 hours! </h4>
+            <label for="text">Your Name:</label>
+            <input type="text" id="name" placeholder="Your name" required>
+
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" placeholder="Email id" required>
+            
+            <label for="message">Your Message:</label>
+            <textarea id="message" rows="4" placeholder="What are your thoughts?" required></textarea>
+            
+
+            <button type="submit">Send Message</button>
+        </form>
+        <script src="./smtp.js"></script>
+        <script>
+            function sendEmail(){
+              Email.sendEmail({
+                Host: "smtppro.zoho.com",
+                Username : "contact@miguelalmodo.com",
+                Password : "EUfnEQ47d7iM",
+                To : "recipient@example.com",
+                From : document.getElementById("email").value,
+                Subject: "We met at the protest",
+                Body : "Free Palestine!"
+              }).then(
+                message => alert(message)
+              );
+
+            }
+
+
+        </script>
+      
+
+          </div>-->
+
+          
+
+        <a href="mailto:contact@miguelalmodo.com" class="btn btn-light btn-lg">
+          Click to open a self - addressed email message in your favorite
+           client.</a>
+      
+      
+      
+      
+      
       
       </div>
+      <div class="row row-cols-1 row-cols-sm-2 g-4">
+        <div class="d-flex flex-column gap-2">
+          
+          <h4 class="fw-semibold mb-0" style="color: rgb(255, 255, 255);">Move beyond strategic sharing.</h4>
+          <p style="color: rgb(255, 255, 255);">
+          Craft your message with intention and authenticity. Find
+           the right medium and multiply its impact with tech. 
+        </div>
 
-      <div class="feature col">
-        <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+        <div class="d-flex flex-column gap-2">
+         
+          <h4 class="fw-semibold mb-0" style="color: rgb(255, 255, 255);">Open source strategy.</h4>
+          <p style="color: rgb(255, 255, 255);">Break the tech monopoly with open source software.
+            Power map your "big bosses" and chart your path to sustainable change.
+            
+          </p>
         </div>
-        <h3 class="fs-2 text-body-emphasis">Engaging Content</h3>
-        <p>What's your medium? Audio, Visual, or Social? Craft authentic messages with a<a href="https://opportunityagenda.org/our-tools/vpsa/"> Values, Problem, Solution, Action framework</a> content to activate your community.</p>
-        
-      </div>
-      <div class="feature col">
-        <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+
+        <div class="d-flex flex-column gap-2">
+          
+          <h4 class="fw-semibold mb-0" style="color: rgb(255, 255, 255);">Cocreate meaning with your community.</h4>
+          <p style="color: rgb(255, 255, 255);">Rally your 
+          community around shared values using a VPSA (Values, Problem, Solution, Action)
+          framework.</p>
         </div>
-        <h3 class="fs-2 text-body-emphasis">Training</h3>
-        <p>The Internet is evolving. Have questions about 
-          alternative social media protocols like Nostr?
-           Request a training to stay ahead of the curve.</p>
-       
+
+        <div class="d-flex flex-column gap-2">
+          
+          
+          <h4 class="fw-semibold mb-0" style="color: rgb(255, 255, 255);">Training</h4>
+          <p style="color: rgb(255, 255, 255);">It seems like there's a new thing every couple months.
+          Have questions about crypto or decentralized social media? 
+          Request a training to stay ahead of the curve.</p>
+        </div></div>
       </div>
     </div>
   </div>
 
+
+
+
+
 </section>
-<div class="b-example-divider"></div>
 
 
 
+
+
+
+
+
+
+ 
 
 
 
@@ -389,6 +478,7 @@ font-weight:400;
     </p>
   </div>
 </footer>
+
   
 
 
