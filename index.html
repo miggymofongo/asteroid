@@ -1,490 +1,425 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-
-<title>El Asteroide De Miguel</title>
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"></link>
-<link rel="stylesheet" href="./styles.css"></link>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="./scripts.js"></script>
-
-
-<script>
-
-$('.container').infiniteScroll({
-  // options
-  path: '.pagination__next',
-  append: '.post',
-  history: false,
-});
-
-
-</script>
-
-<style>
-  .bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-
-  @media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-      font-size: 3.5rem;
-    }
-  }
-
-  .b-example-divider {
-    width: 100%;
-    height: 3rem;
-    background-color: rgba(0, 0, 0, .1);
-    border: solid rgba(0, 0, 0, .15);
-    border-width: 1px 0;
-    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-  }
-
-  .b-example-vr {
-    flex-shrink: 0;
-    width: 1.5rem;
-    height: 100vh;
-  }
-
-  .bi {
-    vertical-align: -.125em;
-    fill: currentColor;
-  }
-
-  .nav-scroller {
-    position: relative;
-    z-index: 2;
-    height: 2.75rem;
-    overflow-y: hidden;
-  }
-
-  .nav-scroller .nav {
-    display: flex;
-    flex-wrap: nowrap;
-    padding-bottom: 1rem;
-    margin-top: -1px;
-    overflow-x: auto;
-    text-align: center;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .btn-bd-primary {
-    --bd-violet-bg: #712cf9;
-    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-    --bs-btn-font-weight: 600;
-    --bs-btn-color: var(--bs-white);
-    --bs-btn-bg: var(--bd-violet-bg);
-    --bs-btn-border-color: var(--bd-violet-bg);
-    --bs-btn-hover-color: var(--bs-white);
-    --bs-btn-hover-bg: #6528e0;
-    --bs-btn-hover-border-color: #6528e0;
-    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-    --bs-btn-active-color: var(--bs-btn-hover-color);
-    --bs-btn-active-bg: #5a23c8;
-    --bs-btn-active-border-color: #5a23c8;
-  }
-
-  .bd-mode-toggle {
-    z-index: 1500;
-  }
-
-  .bd-mode-toggle .dropdown-menu .active .bi {
-    display: block !important;
-  }
-
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-.photo {
-  float: left;
-}
-
-
-.btn-dark-custom {
-  background-color: #343a40; /* Slightly lighter than the default bg-dark */
-  color: white;
-}
-
-.btn-dark-custom:hover {
-  background-color: #23272b; /* Darken on hover for interaction feedback */
-  color: white;
-}
-
-/* CSS used here will be applied after bootstrap.css */
-.jumbotron{
-  position: relative;
-  z-index:-2;
-}
-
-#namecard{
-  align-content: center; 
-
-}
-
-#video-background { 
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  z-index: -1;
-  width:100%;
-}
-
-.grid-item { width: 200px; }
-.grid-item--width2 { width: 400px; }
-
-.white-bold-text {
-  color: white;
-  font-weight: bold;
-}
-
-
-@font-face {
-
-font-family: KHGummi;
-src: url(./fonts/KHGummi.otf);
-font-weight:400;
-}
-
-video {
-      max-width: 100%; /* Ensure video doesn't exceed the container width */
-      height: auto; /* Maintain aspect ratio */
-    }
+  <title>Miguel's Asteroid</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="HTML5 website template">
+  <meta name="keywords" content="global, template, html, sass, jquery">
+  <meta name="author" content="Bucky Maler">
+  <link rel="stylesheet" href="/asteroid/css/main.css">
   
-
-.video-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-
-.video-container video {
-  max-width: 100%;
-  height: auto;
-}
-
-</style>
-
 </head>
-
-
-
 <body>
 
-  <header>
-  <nav class="navbar navbar-dark bg-dark fixed-top">
-    <div class="container-fluid">
-      <img src="./img/Highwind1_opt.png" href="index.html"  alt="GummiShip" style="transform: scale(0.9)";>
-      
-     <h4 class="navbar-brand" href="#" style="color: aliceblue; font-family: KHGummi;">Miguel's Asteroid</h4>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<!-- notification for small viewports and landscape oriented smartphones -->
+<div class="device-notification">
+  <a class="device-notification--logo" href="#0">
+    <img src="assets/img/Highwind1_opt.png" alt="Global">
+    <p>Miguel's Asteroid</p>
+  </a>
+  <p class="device-notification--message">Try viewing on a bigger screen.</p>
+</div>
 
-      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-        
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel" style="font-family: KHGummi;">Cockpit</h5>
-        
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-
-        </div>
-        
-        
-        <div class="offcanvas-body">
-
-          <div class="text-center">
-            <div class="d-inline-block text-center">
-              <img src="./img/WEPA.png" alt="headshot of miguel yelling WEPA!" 
-              style="width: 300px; height: 300px; object-fit: cover;" alt="Headshot of Miguel"></img>
+<div class="perspective effect-rotate-left">
+  <div class="container"><div class="outer-nav--return"></div>
+    <div id="viewport" class="l-viewport">
+      <div class="l-wrapper">
+        <header class="header">
+        <!-- <button class="header--cta cta">Work with Me</button>-->
+          <div class="header--nav-toggle">
+            <span></span>
+          </div>
+        </header>
+        <nav class="l-side-nav">
+          <ul class="side-nav">
+            <li class="is-active"><span>Home</span></li>
+            <li><span>Interests</span></li>
+            <li><span>About</span></li>
+            <li><span>Contact</span></li>
+            <!--Here I am commenting out a menu item from the vertical side nav, reducing from 4 to 5-->
+            <!--<li><span>Work with Me</span></li>-->
+          </ul>
+        </nav>
+        <ul class="l-main-content main-content">
+          <li class="l-section section section--is-active">
+            <div class="intro">
+              <div class="intro--banner">
+                <h1>Welcome<br>to my<br>asteroid.</h1>
                 
-              <br>
-              <h2>Public Interest Communications </h2>
-              <a href="mailto:contact@miguelalmodo.com"><img src="./img/email.png" alt="mail icon" style="width: 50px; height: 50px;"></a>
-              <a href="https://yakihonne.com/users/nprofile1qyw8wumn8ghj7mn0wd68ytfsxyh8jcttd95x7mnwv5hxxmmdqyw8wumn8ghj7mn0wd68ytfsxgh8jcttd95x7mnwv5hxxmmdqy08wumn8ghj7mn0wd68ytfsxvhxgmmjv9nxzcm5dae8jtn0wfnsz9rhwden5te0wfjkccte9ejxzmt4wvhxjmcpremhxue69uhkummnw3ez6vpj9ejx7unpveskxar0wfujummjvuqzpmyk2sz7zxn2vxrtylay2x30lsfedm083q7jagguxtaa933ej6txsnr0xw"><img src="./img/running-nostr.gif" alt="running nostrich gif" style="width: 50px; height: 50px;"></a>
-              <a href="https://www.linkedin.com/in/miguelalmodo/"><img src="./img/LinkedIN.png" alt="linkedin logo" style="width: 50px; height: 50px;"></a>
-              <a href="https://www.github.com/miggymofongo/"><img src="./img/Github.png" alt="github logo" style="width: 50px; height: 50px;"></a>
-              <img src="./img/lightning.png" style="width: 80px; height: 80px; align-items: center;">
-              <br><br>
-              <h6>Zap me Bitcoin!<br>ancientwildflower33459@getalby.com</h6> <img src="./img/code.png" style="width: 100px; height:100px;">
-              <div style= "text-align: end;">
+                <a href="https://library.miguelalmodo.com/">
+                <button class="cta">Check out a book
+                  <svg version="1.1" id="Layer_1" href="https://library.miguelalmodo.com" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                  </g>
+                  </svg>
+                  <span class="btn-background"></span>
+                </button></a>
+                <br><br>
 
+                <a href="https://nostree.me/npub1ajt9gp0prf4xrp4j07j9rghlcyukahncs0fw5ywr977jccued9nqrcc0cs">
+                <button class="cta">Bookmarks
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                  </g>
+                  </svg>
+                  <span class="btn-background"></span>
+                </button>
+              </a>
+                
 
+                <img src="img/introduction-visual.png" alt="Welcome">
               </div>
-           
-              <!--
-                <button class="btn btn-secondary" href="#" disabled>View biography &raquo;</button>
-              -->
-            
-            
+              <div class="intro--options">
+                <a href="https://uberspace.de">
+                  <h3>Deploying Web Apps in Space
+                  </h3>
+                  <p>This website is hosted on Uberspace, a cool worker owned business that rents out server space.</p>
+                </a>
+                <a href="https://nostree.me/npub1ajt9gp0prf4xrp4j07j9rghlcyukahncs0fw5ywr977jccued9nqrcc0cs">
+                  <h3>Creator Residency</h3>
+                  <p>I'm in the Content Creator Residency with nos.social. Find me on Nostr!</p>
+                </a>
+                <a href="https://yakihonne.com/article/naddr1qvzqqqr4gupzpmyk2sz7zxn2vxrtylay2x30lsfedm083q7jagguxtaa933ej6txqq2kgvrrd4zng32dv4fnx6mvgf8n2wr5dc68zlqdkj9">
+                  <h3>#CubaSIBloqeuoNO</h3>
+                  <p>Read about my recent trips to Cuba, where I attended this year's May Day celebrations in Havana with organizers and union members from around
+                    the world.
+                  </p>
+                </a>
               </div>
             </div>
-          
-<br>
+          </li>
+          <li class="l-section section">
+            <div class="work">
+              <h2>Public Interest Communications</h2>
+              <div class="work--lockup">
+                <ul class="slider">
+                  <li class="slider--item slider--item-left">
+                    <a href="https://forge.lightcrystal.systems/migs">
+                      <div class="slider--item-image">
+                        <img src="img/light_crystal.svg" alt="light crystal systems logo">
+                      </div>
+                      <p class="slider--item-title">Web Development</p>
+                      <p class="slider--item-description">Weilding open source protocols in the battle for the Internet</p>
+                    </a>
+                  </li>
+                  <li class="slider--item slider--item-center">
+                    <a href="https://podcastindex-org.github.io/docs-api/#overview--example-code">
+                      <div class="slider--item-image">
+                        <img src="img/pci_avatar.svg" alt="Podcasting Index logo">
+                      </div>
+                      <p class="slider--item-title">Podcast 2.0</p>
+                      <p class="slider--item-description">The next generation of podcasts is here. Learn about the podcast index and RSS.</p>
+                    </a>
+                  </li>
+                  <li class="slider--item slider--item-right">
+                    <a href="https://nostrmeet.me/_@migs.uber.space">
+                      <div class="slider--item-image">
+                        <img src="img/nostr-icon-white-256x256.png" alt="Alex Nowak">
+                      </div>
+                      <p class="slider--item-title">Social Media</p>
+                      <p class="slider--item-description">Social Media is evolving. Ask me about alternative social media
+                       protocols.</p>
+                    </a>
+                  </li>
+                </ul>
+                <div class="slider--prev">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
+                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
+                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z"/>
+                  </g>
+                  </svg>
+                </div>
+                <div class="slider--next">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                  </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="about">
+              <div class="about--banner">
+                <h2>Communications for the <br> public interest.</h2>
+                <a href="https://migs.uber.space/resumes/PIC.pdf">Resume
+                  <span>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                      <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                    </g>
+                    </svg>
+                  </span>
+                </a><br>
+                <a href="https://migs.uber.space/resumes/PIC.pdf">In the news
+                  <span>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                      <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                    </g>
+                    </svg>
+                  </span>
+                </a><br>
+
+                <a href="https://migs.uber.space/portfolio">Portfolio
+                  <span>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                      <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                    </g>
+                    </svg>
+                  </span>
+                </a>
+                
+                <video src="https://v.nostr.build/xE7Vl.webm" alt="video of miguel soliciting cuba donations" style="padding-left: 40%; padding-bottom: 80%;" width="70%" height="70%" controls>
+              </div>
+              <div class="about--options">
+                <a href="#0">
+                  <h3>Philosophy</h3>
+                </a>
+                <a href="#0">
+                  <h3>Who is Miguel</h3>
+                </a>
+                <a href="#0">
+                  <h3>Garden</h3>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="hire">
+              <h2>Got an idea? I want to hear about it.</h2>
+              <!-- checkout formspree.io for easy form setup -->
+              <form class="work-request">
+
+                <div class="work-request--options">
+                  <span class="options-a">
+                    <input id="opt-1" type="checkbox" value="app design">
+                    <label for="opt-1">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Content Creation
+                    </label>
+                    <input id="opt-2" type="checkbox" value="graphic design">
+                    <label for="opt-2">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Training
+                    </label>
+                    <input id="opt-3" type="checkbox" value="motion design">
+                    <label for="opt-3">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Tech Consultation
+                    </label>
+                  </span>
+                  <span class="options-b">
+                    <input id="opt-4" type="checkbox" value="ux design">
+                    <label for="opt-4">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Cooking
+                    </label>
+                    <input id="opt-5" type="checkbox" value="webdesign">
+                    <label for="opt-5">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Communication Strategy
+                    </label>
+                    <input id="opt-6" type="checkbox" value="marketing">
+                    <label for="opt-6">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Marketing
+                    </label>
+                    <input id="opt-6" type="checkbox" value="marketing">
+                    <label for="opt-6">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Just sayin hi
+                    </label>
+                  </span>
+                </div>
 
 
-          
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-
-  
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="https://migs.uber.space/about.html">About</a>
-  
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="https://yakihonne.com/users/nprofile1qqswe9j5qhs356nps6e8lfz35tluzwtwmeug85h2z8pjl0fvvwvkjespr3mhxue69uhkummnw3ez6vp39eukz6mfdphkumn99e3k7mgpr3mhxue69uhkummnw3ez6vpj9eukz6mfdphkumn99e3k7mgpremhxue69uhkummnw3ez6vpn9ejx7unpveskxar0wfujummjvuq3gamnwvaz7tmjv4kxz7fwv3sk6atn9e5k7qg7waehxw309ahx7um5wgknqv3wv3hhyctxv93hgmmj0yhx7un8rfe7nx">Nostr</a>
-              </li>
-
-
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Collaborate
-              </a>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <!-- <li><a class="dropdown-item" href="#">Content Production</a></li> -->
-                <li><a class="dropdown-item" href="https://www.github.com/miggymofongo/">Code</a></li>  
-               <!--<li><a class="dropdown-item" href="#">Campaign Strategy</a></li> -->       
-              </ul>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Resumes
-              </a>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <!--<li><a class="dropdown-item" href="#">Hospitality</a></li>-->
-                <li><a class="dropdown-item" href="https://migs.uber.space/resumes/PIC.pdf">Public Interest Communications</a></li>          
-              </ul>
-            </li>
-
-
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Garden
-              </a>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                 <li><a class="dropdown-item" href="https://library.miguelalmodo.com/#">Bookshelf</a></li>
-                <li><a class="dropdown-item" href="https://migs.uber.space/blog">Chronicles</a></li> 
-                <li><a class="dropdown-item" href="https://github.com/miggymofongo/asteroid/blob/main/scripts.js">Quote Shuffler</a></li>         
-              </ul>
-            </li>
+                <div class="work-request--information">
+                  <div class="information-name">
+                    <input id="name" type="text" spellcheck="false">
+                    <label for="name">Name</label>
+                  </div>
+                  <div class="information-email">
+                    <input id="email" type="email" spellcheck="false">
+                    <label for="email">Email</label>
+                  </div>
+                </div>
+                <input type="submit" value="Send Request">
+              </form>
             
+            </div>
+
+<!--
+            <div class="contact">
+              <div class="contact--lockup">
+                
+                <div class="modal">
+                  <div class="modal--information">
+                    <p>Aguadilla, Puerto Rico</p>
+                    <a href="mailto:contact@miguelalmodo.com">contact@miguelalmodo.com</a>
+                   </div>
+                  <ul class="modal--options">
+                    <li><a href="https://nostree.me/npub1ajt9gp0prf4xrp4j07j9rghlcyukahncs0fw5ywr977jccued9nqrcc0cs">Nostr</a></li>
+                    <li><a href="https://linkedin/in/miguelalmodo">LinkedIn</a></li>
+                    <li><a href="mailto:contact@miguelalmodo.com">Send me an email</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          -->
+
+          </li>
+         <!-- <li class="l-section section">
+            <div class="hire">
+              <h2>Available for hire</h2>
+               checkout formspree.io for easy form setup
+              <form class="work-request">
+
+                <div class="work-request--options">
+                  <span class="options-a">
+                    <input id="opt-1" type="checkbox" value="app design">
+                    <label for="opt-1">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Content Creation
+                    </label>
+                    <input id="opt-2" type="checkbox" value="graphic design">
+                    <label for="opt-2">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Web Development
+                    </label>
+                    <input id="opt-3" type="checkbox" value="motion design">
+                    <label for="opt-3">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Tech Consultation
+                    </label>
+                  </span>
+                  <span class="options-b">
+                    <input id="opt-4" type="checkbox" value="ux design">
+                    <label for="opt-4">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Cooking
+                    </label>
+                    <input id="opt-5" type="checkbox" value="webdesign">
+                    <label for="opt-5">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Communication Strategy
+                    </label>
+                    <input id="opt-6" type="checkbox" value="marketing">
+                    <label for="opt-6">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      Marketing
+                    </label>
+                  </span>
+                </div>
+
+
+                <div class="work-request--information">
+                  <div class="information-name">
+                    <input id="name" type="text" spellcheck="false">
+                    <label for="name">Name</label>
+                  </div>
+                  <div class="information-email">
+                    <input id="email" type="email" spellcheck="false">
+                    <label for="email">Email</label>
+                  </div>
+                </div>
+                <input type="submit" value="Send Request">
+              </form>
             
+            </div>
 
-
-           
-          </ul>
-          
-        </div>
-        
+          </li> -->
+        </ul>
       </div>
     </div>
-  </nav>
-</header>
-
-
-<section>
-  <div class="my-5">
-    <div class="p-5 text-center bg-body-tertiary">
-      <div class="container py-5">
-        <h1 class="text-body-emphasis quote-banner">All aboard the Gummi Ship!</h1>
-        
-        <p class="col-lg-8 mx-auto lead">
-          Thanks for visiting my asteroid. Explore the depths of uberspace
-          while we battle space pirates and save worlds from corporate tech!
-                 </p>
-
-          <button class="btn btn-dark-custom btn-lg" type="button" onclick="window.location.href='https://migs.uber.space/about.html';">About</button>
-          <button class="btn btn-dark-custom btn-lg" type="button" onclick="window.location.href='https://github.com/miggymofongo';">Git</button>
-          <button class="btn btn-dark-custom btn-lg" type="button" onclick="window.location.href='https://library.miguelalmodo.com';">Bookshelf</button>
-      
-        
-        </div>
-    </div>
   </div>
-</section>
-
-<section>
-  <h1> Carta de Presentacion para PlenitudPR </h1>
-<div class="video-container">
-  <video src="https://v.nostr.build/7GeB3.mp4" style="align-items: center;" controls>
-Carta de Presentacion para PlenitudPR
-  </video>
+  <ul class="outer-nav">
+    <a href="https://uberspace.de/en"><img src="https://dashboard.uberspace.de/static/img/badge_dark.png"></a>
+    <li class="is-active">Home</li>
+    <li>Interests</li>
+    <li>About</li>
+    <li>Contact</li>
+    
+    <!-- <li>Work with Me</li> -->
+  </ul>
 </div>
-</section>
 
-
-<section style="background-color: #23272b;">
-
-
-
-  <div class="container px-4 py-5" style="background-color: #23272b;">
-  <h2 class="pb-2 border-bottom" style="color: aliceblue; font-family: KHGummi;">Let's collaborate.
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     &nbsp;&nbsp;&nbsp;&#160;&#160;&#160;&#160; 
-     &nbsp;&nbsp;&nbsp;&#160;&#160;&#160;&#160;  
-   
-     <img src="img/leroy_opt.png" alt="pic of leroy from the movie leroy and stich">   </h2>
-
-    <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
-      <div class="d-flex flex-column align-items-start gap-2">
-        <h3 class="fw-bold" style="color: aliceblue;">Communications for the Public Good</h3>
-        <p style="color: rgb(255, 255, 255);">The <a
-           href="https://migs.uber.space/blog/corporate-social-media-is-killing-us">
-           corporate social media landscape looks grim.</a>
-          They are tearing our society apart apart with the constant 
-          bombardment of advertising and antagonizing algorithms. 
-          Movements in 2024 need a robust communication strategy and the power of a 
-          decentralized internet. It's on us to take back the digital commons once and for all. 
-          </a></p>
-          <!-- <div class="container">         
-         
-          <form onsubmit="sendEmail()" style="color: rgb(255, 255, 255);">
-            <h4 style="color: rgb(255, 255, 255);">Send me an email and get a response back
-          within 48 hours! </h4>
-            <label for="text">Your Name:</label>
-            <input type="text" id="name" placeholder="Your name" required>
-
-            <label for="email">Email ID:</label>
-            <input type="email" id="email" placeholder="Email id" required>
-            
-            <label for="message">Your Message:</label>
-            <textarea id="message" rows="4" placeholder="What are your thoughts?" required></textarea>
-            
-
-            <button type="submit">Send Message</button>
-        </form>
-        <script src="./smtp.js"></script>
-        <script>
-            function sendEmail(){
-              Email.sendEmail({
-                Host: "smtppro.zoho.com",
-                Username : "contact@miguelalmodo.com",
-                Password : "EUfnEQ47d7iM",
-                To : "recipient@example.com",
-                From : document.getElementById("email").value,
-                Subject: "We met at the protest",
-                Body : "Free Palestine!"
-              }).then(
-                message => alert(message)
-              );
-
-            }
-
-
-        </script>
-      
-
-          </div>-->
-
-          
-
-        <a href="mailto:contact@miguelalmodo.com" class="btn btn-light btn-lg">
-          Click to open a self - addressed email message in your favorite
-           client.</a>
-      
-      
-      
-      
-      
-      
-      </div>
-      <div class="row row-cols-1 row-cols-sm-2 g-4">
-        <div class="d-flex flex-column gap-2">
-          
-          <h4 class="fw-semibold mb-0" style="color: rgb(255, 255, 255);">Move beyond strategic sharing.</h4>
-          <p style="color: rgb(255, 255, 255);">
-          Craft your message with intention and authenticity. Find
-           the right medium and multiply its impact with tech. 
-        </div>
-
-        <div class="d-flex flex-column gap-2">
-         
-          <h4 class="fw-semibold mb-0" style="color: rgb(255, 255, 255);">Open source strategy.</h4>
-          <p style="color: rgb(255, 255, 255);">Break the tech monopoly with open source software.
-            Power map your "big bosses" and chart your path to sustainable change.
-            
-          </p>
-        </div>
-
-        <div class="d-flex flex-column gap-2">
-          
-          <h4 class="fw-semibold mb-0" style="color: rgb(255, 255, 255);">Cocreate meaning with your community.</h4>
-          <p style="color: rgb(255, 255, 255);">Rally your 
-          community around shared values using a VPSA (Values, Problem, Solution, Action)
-          framework.</p>
-        </div>
-
-        <div class="d-flex flex-column gap-2">
-          
-          
-          <h4 class="fw-semibold mb-0" style="color: rgb(255, 255, 255);">Training</h4>
-          <p style="color: rgb(255, 255, 255);">It seems like there's a new thing every couple months.
-          Have questions about crypto or decentralized social media? 
-          Request a training to stay ahead of the curve.</p>
-        </div></div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-</section>
-
-
-
-
-
-
-
-
-
- 
-
-
-
-<footer class="footer">
-  <div class="container">
-    <span class="text-muted">© 2024 Miguel Almodóvar</span> <span style="font-weight: bolder;"><a href="https://uberspace.de/en/about/";>This website is hosted on an asteroid in uberspace!</a></span>
-          
-    </p>
-  </div>
-</footer>
-
-  
-
-
-
-
-
-  </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+<script src="js/functions-min.js"></script>
+</body>
 </html>
