@@ -1,8 +1,9 @@
- May Update
- 
- This repository represents the set up for my uberspace asteroid. I am in the process of pointing my main domain to this page.
+5.16.24
 
-I used this theme https://github.com/BuckyMaler/global
+
+This repository represents the set up for my uberspace asteroid. My name domain domain, miguelalmodo.com, points here..
+
+I am working from this theme https://github.com/BuckyMaler/global
 
 
 To Do List
@@ -10,7 +11,7 @@ To Do List
 - implement simple contact form
 - create Philosophy page
 - create Garden Page
-- create Who is Miguel Page
+- update Who is Miguel Page
 - add Spanish Translations
 
 
