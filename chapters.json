@@ -1,0 +1,18 @@
+{
+    "version": "1.2.0",
+    "chapters":
+    [
+        {
+            "startTime": 0,
+            "title": "Intro"
+        },
+
+        {
+            "startTime": 42,
+            "title": "Meet Isaac"
+        }
+
+
+
+    ]
+}
