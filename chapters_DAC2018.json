@@ -1,0 +1,32 @@
+{
+    "version": "1.2.0",
+    "chapters":
+    [
+        {
+            "startTime": 0,
+            "title": "Intro"
+        },
+
+        {
+            "startTime": 42,
+            "title": "Last Episode Recap"
+        },
+
+        {
+
+            "startTime": 105,
+            "title": "Day at the Capital 2018"
+        },
+
+       
+        {
+
+            "startTime": 940,
+            "title": "Spoken Word Outro"
+        }
+
+     
+
+
+    ]
+}

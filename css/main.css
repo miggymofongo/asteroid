@@ -1048,7 +1048,8 @@ body {
 
 }
 .about--options>a:nth-child(2) {
-    background-image:url("../img/kaido.png")
+    background-image:url("../img/kaido.png");
+    background-position: center top 0px;
 }
 .about--options>a:nth-child(3) {
     background-image:url("../img/kevinhart.jpg");
