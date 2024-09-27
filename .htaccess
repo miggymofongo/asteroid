@@ -1,19 +1,22 @@
-AddDefaultCharset UTF-8
-
 <IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
 
-# Enable rewrite rules
-RewriteEngine on
+    # Ensure that static files like .js, .css, and service worker are not affected by rewrite rules
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule \.(js|css|png|jpg|jpeg|gif|svg|ico|json|map)$ - [L]
 
-# Base directory
-RewriteBase /Bludit/
+    # Ensure service worker is served from the /dist/ folder
+    RewriteRule ^dist/sw\.js$ - [L]
 
-# Deny direct access to the next directories
-RewriteRule ^bl-content/(databases|workspaces|pages|tmp)/.*$ - [R=404,L]
+    # For Single Page Application (SPA) routing
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.html [L]
+</IfModule>
 
-# All URL process by index.php
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*) index.php [PT,L]
-
+# Add the correct MIME type for .js and .json files
+<IfModule mod_mime.c>
+    AddType application/javascript .js
+    AddType application/manifest+json .json
 </IfModule>

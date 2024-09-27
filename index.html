@@ -8,8 +8,14 @@
   <meta name="description" content="Miguel's Landing Page">
   <meta name="keywords" content="global, template, html, sass, jquery">
   <link rel="stylesheet" href="css/main.css">
+  <script rel="./service.worker.js"></script>
+  <script rel="./scripts.js"></script>
+
+  <link rel="manifest" href="./manifest.json">
+
   <link rel="icon" type="image/x-icon" href="/img/Menu_Light.png">
-  
+  <script src="https://unpkg.com/nostr-tools/lib/nostr.bundle.js"></script>
+
 </head>
 <body>
 
@@ -53,12 +59,12 @@
           <ul class="side-nav">
             <li class="is-active"><span>Home</span></li>
             <li><span>Interests</span></li>
+            <li><span>Social</span></li>
             <li><span>About</span></li>
+            
             <li><span>Contact</span></li>
             
-            <!--Here I am commenting out a menu item from the vertical
-              left side nav, reducing from 4 to 5-->
-            <!--<li><span>Work with Me</span></li>-->
+          
           </ul>
         </nav>
 
@@ -211,6 +217,46 @@
           </li>
           <!-- End of the second section -->
 
+
+          <li class="l-section section">
+          <div class="intro">
+            <div class="intro--banner">
+              <h1>Social Media<br>Revolution.</h1>
+         
+              <img src="img/nostr-logo-purple-transparent-928x363.png" alt="nostr">
+            </div>
+            <div class="intro--options">
+              <a href="https://uberspace.de">
+                <h3>Explore my asteroid!</h3>
+                <p>This site is hosted on asteroids 
+                  with Uberspace. I'm learning web development to
+                  be able to make a better impact with my digital presence.
+                  If you are curious about how to set up your own,
+                  just reach out and ask so we can talk about it.
+                </p>
+              </a>
+              <a href="https://nostree.me/npub1ajt9gp0prf4xrp4j07j9rghlcyukahncs0fw5ywr977jccued9nqrcc0cs">
+                <h3>Creator Residency</h3>
+                <p>I'm in the Content Creator Residency with nos.social. 
+                  Nostr is social media that you control. Find me on nostr
+                  miggymofongo@miguelalmodo.com Ask me to learn 
+                more!</p>
+              </a>
+              <a href="https://yakihonne.com/article/naddr1qvzqqqr4gupzpmyk2sz7zxn2vxrtylay2x30lsfedm083q7jagguxtaa933ej6txqq2kgvrrd4zng32dv4fnx6mvgf8n2wr5dc68zlqdkj9">
+                <h3>Organizer</h3>
+                <p>Read about my recent trips to Cuba where I attended 
+                  this year's May Day celebrations in Havana with 
+                  organizers and union members from around
+                  the world. #CubaSIBoqueoNO
+                </p>
+              </a>
+            </div>
+
+          </div>
+          </li>
+
+
+
           <!-- Beginning of the third section -->
           <li class="l-section section">
             <div class="about">
@@ -257,7 +303,7 @@
           </li>
           <!--End of the third section-->
 
-
+          
           <!-- Beginning of the fourth section -->
 
           <li class="l-section section">
@@ -267,7 +313,7 @@
               <div id="result"></div>
               
               <form class="work-request" action="https://api.web3forms.com/submit" method="POST" id="form">
-                <input type="hidden" name="access_key" value="">
+                <input type="hidden" name="access_key" value="15117b52-27ee-40ba-8eef-f6e67c2a3292">
                 <input type="hidden" name="from_name" value="Asteroid">
                 <div class="work-request--options">
                   
@@ -532,13 +578,14 @@
     
       <li class="is-active">Home</li>
       <li>Interests</li>
+      <li>Social</li>
       <li>About</li>
       <li>Contact</li>
       
     </ul>
     
     
-    <!-- <li>Work with Me</li> -->
+    
   </ul>
 
   <!-- Outer nav bar ends -->
@@ -588,6 +635,7 @@ form.addEventListener('submit', function(e) {
           });
 });
 </script>
+<script src="js/nostr.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
 <script src="js/functions-min.js"></script>
 <script>window.onload = function() {
@@ -598,31 +646,5 @@ form.addEventListener('submit', function(e) {
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
